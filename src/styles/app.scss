@@ -1,7 +1,55 @@
-body {
-  margin: 0;
-  background: #afafaf;
+@import 'normalize';
+
+//colors
+$black: #373e42;
+$grey: #455a64;
+$green: #009688;
+$light: #00bfa5;
+
+html {
+  width: 100%;
+  height: 100%;
 }
 
-@import 'common/menu';
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+ // overflow: hidden;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+} 
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  max-width: 1800px;
+}
+
+@import 'common/burger_menu';
 @import 'common/socials';
+@import 'common/hero';
+@import 'common/about';
+@import 'common/footer';
+@import 'common/blog';
+@import 'common/welcome';
+@import '_misc/fonts';

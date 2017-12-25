@@ -4,31 +4,123 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
-    <title>Блог</title>
+    <title></title>
     <link rel="stylesheet" href="assets/styles/app.min.css">
   </head>
   <body>
-    <h1>Блог</h1>
-    <ul>
-      <li>
-        <h2>Заголовок статьи</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, voluptatibus nihil? Magnam, quas. Libero eveniet, itaque ab assumenda impedit voluptatibus, nostrum molestiae, doloribus voluptas exercitationem sit quidem nihil odit distinctio?</p>
-      </li>
-      <li>
-        <h2>Заголовок второй статьи</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A dolorem distinctio est fugit, tenetur expedita recusandae deserunt numquam</p>
-      </li>
-      <li>
-        <h2>Третья статья</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime tempore deserunt nihil, fugit, id placeat, nam esse suscipit omnis temporibus minus necessitatibus voluptas. Quo molestias nostrum similique, alias harum numquam.Architecto tempore iure, corrupti quae voluptate suscipit eligendi laudantium quos exercitationem, provident facere similique neque! Aliquid, sunt. Ex deserunt quo velit exercitationem, pariatur repudiandae nulla quibusdam? Dolorem magnam nulla consequuntur.Quas, in nobis praesentium corporis blanditiis ab saepe eaque earum eius tenetur odit reprehenderit totam consequatur fuga perspiciatis assumenda ipsam magnam enim. Non ut ipsum culpa accusantium commodi dicta sunt.</p>
-      </li>
-    </ul>
-    <h2>Меню</h2>
-    <ul class="menu">
-      <li><a href="index.html">Главная</a></li>
-      <li><a href="about.html">Обо мне</a></li>
-      <li><a href="my-works.html">Мои работы</a></li>
-      <li><a href="blog.html">Блог</a></li>
-    </ul>
+    <header class="section hero">
+      <div class="hero__socials">
+        <ul class="socials">
+          <li class="socials__items"><a class="socials__link" href="https://vk.com/olesia_sev" title="ВКонтакте">
+              <svg class="socials__svg-icon">
+                <use xlink:href="assets/images/icons.svg#vk"></use>
+              </svg></a></li>
+          <li class="socials__items"><a class="socials__link" href="https://github.com/olesia-sev" title="GitHub">
+              <svg class="socials__svg-icon">
+                <use xlink:href="assets/images/icons.svg#github"></use>
+              </svg></a></li>
+          <li class="socials__items"><a class="socials__link" href="https://www.linkedin.com/in/olesia-sevostianova-929793100/" title="LinkedIn">
+              <svg class="socials__svg-icon">
+                <use xlink:href="assets/images/icons.svg#in"></use>
+              </svg></a></li>
+        </ul>
+      </div>
+      <div class="hero__burger-menu">
+        <div class="burger-menu"></div>
+      </div>
+      <div class="hero__title"><img class="hero__title-pic" src="" alt=""></div>
+      <div class="user hero__user">
+        <div class="user__pic"><img class="user__pic-img" src="assets/images/avatar.jpg" alt=""></div>
+        <div class="user__description">
+          <div class="user__name">Олeся Севостьянова</div>
+          <div class="user__info">Личный сайт веб-разработчика</div>
+        </div>
+      </div>
+      <div class="arrow-down hero__scroll-down"></div>
+    </header>
+    <main class="section blog">
+      <div class="triangle-block">
+        <div class="triangle">
+          <svg class="traingle-svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none">
+            <polygon class="left white" points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
+            <polygon class="right white" points="1000,0   1000,86   500,86   500,75.5"></polygon>
+          </svg>
+        </div>
+      </div>
+      <div class="container-blog">
+        <nav class="nav-articles">
+          <ul class="nav-articles__list">
+            <li class="nav-articles__item">Самое важное в SASS</li>
+            <li class="nav-articles__item">Приёмы в вёрстке, без которых не обходится ни один сайт</li>
+            <li class="nav-articles__item">Самый необходимый набор Gulp плагинов</li>
+            <li class="nav-articles__item">Почему я выбрал Jade</li>
+          </ul>
+        </nav>
+        <div class="articles-block">
+          <article class="article">
+            <div class="article__title">Самое важное в SASS</div>
+            <div class="article__date">18.09.2017</div>
+            <div class="article__text">Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия. Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</div>
+          </article>
+          <article class="article">
+            <div class="article__title">Приёмы в вёрстке, без которых не обходится ни один сайт</div>
+            <div class="article__date">20.10.2017</div>
+            <div class="article__text">Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия. Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</div>
+          </article>
+          <article class="article">
+            <div class="article__title">Самый необходимый набор Gulp плагинов</div>
+            <div class="article__date">09.11.2017</div>
+            <div class="article__text">Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия. Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</div>
+          </article>
+          <article class="article">
+            <div class="article__title">Почему я выбрал Jade</div>
+            <div class="article__date">11.12.2017</div>
+            <div class="article__text">Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия. Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</div>
+          </article>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__row">
+        <div class="footer__col footer__col-left">
+          <nav class="footer__menu">
+            <ul class="footer__menu-list">
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Мои работы</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Обо мне</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Блог</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Авторизация</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__col footer__col-right">
+          <ul class="socials socials-rounded">
+            <li class="socials__items"><a class="socials__link" href="https://vk.com/olesia_sev" title="ВКонтакте">
+                <svg class="socials__svg-icon socials__svg-icon--rounded">
+                  <use xlink:href="assets/images/icons.svg#vk_round"></use>
+                </svg></a></li>
+            <li class="socials__items"><a class="socials__link" href="https://github.com/olesia-sev" title="GitHub">
+                <svg class="socials__svg-icon socials__svg-icon--rounded">
+                  <use xlink:href="assets/images/icons.svg#github_round"></use>
+                </svg></a></li>
+            <li class="socials__items"><a class="socials__link" href="https://www.linkedin.com/in/olesia-sevostianova-929793100/" title="LinkedIn">
+                <svg class="socials__svg-icon socials__svg-icon--rounded">
+                  <use xlink:href="assets/images/icons.svg#in_round"></use>
+                </svg></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__row">
+        <div class="footer__col footer__col-left">
+          <div class="footer__text">
+            <p>Я веб-разработчик из Санкт-Петербурга, и этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool.</p>
+          </div>
+        </div>
+        <div class="footer__col footer__col-right">
+          <div class="footer__text">
+            <p>© Олeся Севостьянова | создано с любовью в LoftSchool | 2018</p>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

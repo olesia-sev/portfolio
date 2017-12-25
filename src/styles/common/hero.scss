@@ -1,0 +1,37 @@
+.hero {
+  height: 100vh;
+  background: url(../images/pages-bg.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+.user {
+  position: absolute;
+  //top: 50%;
+  //left: 50%;
+  transform: translate(150%, 60%);
+  text-align: center;
+
+  &__description {
+    text-align: center;
+  }
+
+  &__name {
+    color: #fff;
+    font-family: roboto;
+    font-size: 35px;
+    font-weight: 500;
+  }
+
+  &__info {
+    color: #fff;
+    font-family: roboto;
+    font-size: 16px;
+    font-weight: 300;
+  }
+}
+
+.user__pic-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+}

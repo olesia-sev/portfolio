@@ -4,4 +4,71 @@ block variables
   -var title = 'Добро пожаловать!'
 
 block content
-  h1 Главная
+  .container-welcome.welcome
+    .welcome__auth-btn
+      a.auth-btn(href=) Авторизоваться
+    .welcome__form-wrapper
+      .welcome__form
+        .welcome__form-user
+          .user__pic
+            img(src="assets/images/avatar.jpg", alt="").user__pic-img
+          .user__description
+            .user__name.user__name--black Олeся Севостьянова
+            .user__info.user__info--black Личный сайт веб-разработчика
+        .welcome__form-socials
+          ul.socials
+            - 
+              var socials = [
+                {
+                  icon: 'assets/images/icons.svg#vk',
+                  title: 'ВКонтакте',
+                  linkClassName: 'vk',
+                  href: 'https://vk.com/olesia_sev'
+                },
+                {
+                  icon: 'assets/images/icons.svg#github',
+                  title: 'GitHub',
+                  linkClassName: 'GitHub',
+                  href: 'https://github.com/olesia-sev'
+                },
+                {
+                  icon: 'assets/images/icons.svg#in',
+                  title: 'LinkedIn',
+                  linkClassName: 'LinkedIn',
+                  href: 'https://www.linkedin.com/in/olesia-sevostianova-929793100/'
+                },
+              ]
+            for pic in socials
+              li.socials__items
+                a.socials__link(
+                  href= pic.href,
+                  title= pic.title
+                )
+                  svg.socials__svg-icon
+                    use(xlink:href= pic.icon)
+        .welcome__form-menu
+          ul.form-menu__list
+            -
+              var items = [
+                {
+                  text: 'Мои работы',
+                  linkClassName: 'my-works',
+                  href: 'my-works.html'
+                },
+                {
+                  text: 'Обо мне',
+                  linkClassName: 'about-me',
+                  href: 'about.html'
+                },
+                {
+                  text: 'Блог',
+                  linkClassName: 'blog',
+                  href: 'blog.html'
+                },
+              ]
+            for item in items
+              li.form-menu__item
+                a.form-menu__link(href=item.href)
+                  | #{item.text}   
+    .welcome__footer
+      .welcome__footer-text &copy; Олеся Севостьянова | создано с любовью в LoftSchool | 2018

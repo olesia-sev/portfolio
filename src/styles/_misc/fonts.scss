@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'bernier_regular';
+  src: url('../fonts/bernier/bernierregular-regular-webfont.woff2') format('woff2'),
+       url('../fonts/bernier/bernierregular-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'bernier_shade';
+  src: url('../../fonts/woff/bernier/berniershade-regular-webfont.woff2') format('woff2'),
+       url('../../fonts/woff/bernier/berniershade-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'bernier_distressed';
+  src: url('../../fonts/woff/bernier/bernierdistressed-regular-webfont.woff2') format('woff2'),
+       url('../../fonts/woff/bernier/bernierdistressed-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

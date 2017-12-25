@@ -11,12 +11,16 @@ const gulpWebpack = require('gulp-webpack');
 const webpack = require('webpack');
 const webpackConfig = require('./webpack.config.js');
 
+const svgstore = require('gulp-svgstore');
+const path = require('path');
+
+const ttf2woff = require('gulp-ttf2woff');
+
 const paths = {
   root: './build',
   templates: {
     pages: 'src/templates/pages/*.pug',
-    src: 'src/templates/**/*.pug',
-    //dest: 'build/assets/'
+    src: 'src/templates/**/*.pug'
   },
   styles: {
     src: 'src/styles/**/*.scss',
@@ -29,6 +33,10 @@ const paths = {
   scripts: {
     src: 'src/scripts/**/*.js',
     dest: 'build/assets/scripts/'
+  },
+  fonts: {
+    src: 'src/fonts/**/*.ttf',
+    dest: 'build/assets/fonts/'
   }
 }
 
@@ -45,10 +53,30 @@ function styles() {
   return gulp
     .src('./src/styles/app.scss')
     .pipe(sourcemaps.init())
-    .pipe(sass({outputStyle: 'compressed'}))
+    .pipe(sass({
+      includePaths: require('node-normalize-scss').includePaths,
+      outputStyle: 'compressed'
+    }))
     .pipe(sourcemaps.write())
-    .pipe(rename({suffix: '.min'}))
+    .pipe(rename({
+      suffix: '.min'
+    }))
     .pipe(gulp.dest(paths.styles.dest))
+}
+
+//fonts 
+// function ttfToWoff() {
+//   gulp.src(paths.fonts.src)
+//     .pipe(ttf2woff())
+//     .pipe(gulp.dest(paths.fonts.src))
+// }
+
+//svg
+function svg() {
+  return gulp
+      .src('./src/images/icons/*.svg')
+      .pipe(svgstore())
+      .pipe(gulp.dest(paths.images.dest));
 }
 
 //clean
@@ -81,17 +109,30 @@ function images() {
 //scripts, webpack
 function scripts() {
   return gulp.src('src/scripts/app.js')
-      .pipe(gulpWebpack(webpackConfig, webpack)) 
+      //.pipe(gulpWebpack(webpackConfig, webpack)) 
       .pipe(gulp.dest(paths.scripts.dest));
 }
 
 exports.templates = templates;
+
 exports.styles = styles;
+
 exports.clean = clean;
+
 exports.images = images;
+
+exports.svg = svg;
+
+exports.scripts = scripts;
+
+exports.watch = watch;
+
+exports.server = server;
+
+//exports.ttfToWoff = ttfToWoff;
 
 gulp.task('default', gulp.series(
   clean,
-  gulp.parallel(styles, templates, images, scripts),
+  gulp.parallel(styles, templates, images, svg, scripts),
   gulp.parallel(watch, server)
 ));

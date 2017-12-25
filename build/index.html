@@ -8,13 +8,45 @@
     <link rel="stylesheet" href="assets/styles/app.min.css">
   </head>
   <body>
-    <h1>Главная</h1>
-    <h2>Меню</h2>
-    <ul class="menu">
-      <li><a href="index.html">Главная</a></li>
-      <li><a href="about.html">Обо мне</a></li>
-      <li><a href="my-works.html">Мои работы</a></li>
-      <li><a href="blog.html">Блог</a></li>
-    </ul>
+    <div class="container-welcome welcome">
+      <div class="welcome__auth-btn"><a class="auth-btn" href>Авторизоваться</a></div>
+      <div class="welcome__form-wrapper">
+        <div class="welcome__form">
+          <div class="welcome__form-user">
+            <div class="user__pic"><img class="user__pic-img" src="assets/images/avatar.jpg" alt=""></div>
+            <div class="user__description">
+              <div class="user__name user__name--black">Олeся Севостьянова</div>
+              <div class="user__info user__info--black">Личный сайт веб-разработчика</div>
+            </div>
+          </div>
+          <div class="welcome__form-socials">
+            <ul class="socials">
+              <li class="socials__items"><a class="socials__link" href="https://vk.com/olesia_sev" title="ВКонтакте">
+                  <svg class="socials__svg-icon">
+                    <use xlink:href="assets/images/icons.svg#vk"></use>
+                  </svg></a></li>
+              <li class="socials__items"><a class="socials__link" href="https://github.com/olesia-sev" title="GitHub">
+                  <svg class="socials__svg-icon">
+                    <use xlink:href="assets/images/icons.svg#github"></use>
+                  </svg></a></li>
+              <li class="socials__items"><a class="socials__link" href="https://www.linkedin.com/in/olesia-sevostianova-929793100/" title="LinkedIn">
+                  <svg class="socials__svg-icon">
+                    <use xlink:href="assets/images/icons.svg#in"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+          <div class="welcome__form-menu">
+            <ul class="form-menu__list">
+              <li class="form-menu__item"><a class="form-menu__link" href="my-works.html">Мои работы   </a></li>
+              <li class="form-menu__item"><a class="form-menu__link" href="about.html">Обо мне   </a></li>
+              <li class="form-menu__item"><a class="form-menu__link" href="blog.html">Блог   </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="welcome__footer">
+        <div class="welcome__footer-text">&copy; Олеся Севостьянова | создано с любовью в LoftSchool | 2018</div>
+      </div>
+    </div>
   </body>
 </html>

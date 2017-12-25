@@ -1,0 +1,47 @@
+footer.footer
+    .footer__row
+      .footer__col.footer__col-left
+        nav.footer__menu
+          ul.footer__menu-list
+            each item in ['Мои работы', 'Обо мне', 'Блог', 'Авторизация']
+              li.footer__menu-item
+                a(href="#" class=`footer__menu-link`) #{item}
+      .footer__col.footer__col-right
+        ul.socials.socials-rounded
+          - 
+            var socials = [
+              {
+                icon: 'assets/images/icons.svg#vk_round',
+                title: 'ВКонтакте',
+                linkClassName: 'vk',
+                href: 'https://vk.com/olesia_sev'
+              },
+              {
+                icon: 'assets/images/icons.svg#github_round',
+                title: 'GitHub',
+                linkClassName: 'GitHub',
+                href: 'https://github.com/olesia-sev'
+              },
+              {
+                icon: 'assets/images/icons.svg#in_round',
+                title: 'LinkedIn',
+                linkClassName: 'LinkedIn',
+                href: 'https://www.linkedin.com/in/olesia-sevostianova-929793100/'
+              },
+            ]
+          for pic in socials
+            li.socials__items
+              a.socials__link(
+                href= pic.href,
+                title= pic.title
+              )
+                svg.socials__svg-icon.socials__svg-icon--rounded
+                  use(xlink:href= pic.icon)
+    .footer__row
+      .footer__col.footer__col-left
+        .footer__text
+          p Я веб-разработчик из Санкт-Петербурга, и этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool.
+      .footer__col.footer__col-right
+        .footer__text
+          p © Олeся Севостьянова | создано с любовью в LoftSchool | 2018
+          

@@ -4,5 +4,91 @@ block variables
   -var title = 'Обо мне'
 
 block content
-  h1 Обо мне
-  include ../common/socials.pug
+  //-include ../common/socials.pug
+  include ../common/hero.pug  
+  section.section.about
+    .triangle-block
+      .triangle.triangle-left
+        svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="traingle-svg")
+          polygon(class = "left grey" points="0,0   0,86   500.8,86   500.8,75.5")
+          polygon(class = "right beige" points="1000,0   1000,86   500,86   500,75.5")
+      .triangle.triangle-right
+    .about__left
+      .triangle.triangle_fill_white
+      .about__left-title
+        .block-title Обо мне
+      .about__left-content
+        .user-description
+          .user-description__pic
+            img(src="http://lorempixel.com/output/abstract-q-c-440-400-1.jpg", alt="").user-description__img
+          .user-description__title
+            .block-subtitle Кто я
+          .user-description__text.text-content
+            p Я начинающий веб разработчик из Санкт-Петербурга. Мне 26 лет. Я занимаюсь разработкой современных сайтов. Мне нравится делать интересные и современные проекты.
+            p Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+    .about__right
+      .triangle.triangle_fill_beige
+      .about__right-title
+        .block-subtitle Чем я могу быть вам полезна
+      .about__right-text.text-content
+        p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+      .about__right-content
+        ul.skills-list
+          each item in ['Frontend', 'Backend', 'WorkFlow']
+            li.skills-list__item
+              .skills-list__row
+                .skills-list__row-title #{item}
+              ul.skills-row
+                each skill in ['html5', 'css3', 'JavaScript & JQuery']
+                  li.skills-row__item
+                    .skill
+                      svg.skill-circle
+                      .skill-title #{skill}
+  section.section.map
+    .yandex-map
+    .contacts
+      .contacts__title
+        .block-subtitle Контакты
+        ul.contacts__list
+          - 
+            var contacts = [
+              {
+                icon: 'assets/images/icons.svg#skype',
+                title: 'skype',
+                text: 'sevostyanova.olesya',
+                linkClassName: 'skype',
+                href: 'skype:sevostyanova.olesya'
+              },
+              {
+                icon: 'assets/images/icons.svg#envelope',
+                title: 'mail',
+                text: 'olesya0191@gmail.com',
+                linkClassName: 'mail',
+                href: 'mailto:olesya0191@gmail.com'
+              },
+              {
+                icon: 'assets/images/icons.svg#phone',
+                title: 'phone',
+                text: '+7 921 655 33 97',
+                linkClassName: 'phone',
+                href: 'tel:+79216553397'
+              },
+              {
+                icon: 'assets/images/icons.svg#map_marker',
+                title: 'Санкт-Петербург',
+                text: 'Санкт-Петербург',
+              },
+            ]
+          for contact in contacts
+            li.contacts__item
+              .contacts-row
+                .contacts-row__icon
+                  a.contacts__link(
+                    class= contact.linkClassName,
+                    href= contact.href, 
+                    title= contact.title
+                  )
+                    svg.contacts__svg-icon
+                      use(xlink:href= contact.icon)
+                    | #{contact.text}            
+  include ../common/footer.pug

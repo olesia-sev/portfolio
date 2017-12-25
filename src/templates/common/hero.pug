@@ -1,0 +1,47 @@
+block variables
+  -var hero = 'Личный сайт веб-разработчика'
+
+header.section.hero
+  .hero__socials
+    ul.socials
+      - 
+        var socials = [
+          {
+            icon: 'assets/images/icons.svg#vk',
+            title: 'ВКонтакте',
+            linkClassName: 'vk',
+            href: 'https://vk.com/olesia_sev'
+          },
+          {
+            icon: 'assets/images/icons.svg#github',
+            title: 'GitHub',
+            linkClassName: 'GitHub',
+            href: 'https://github.com/olesia-sev'
+          },
+          {
+            icon: 'assets/images/icons.svg#in',
+            title: 'LinkedIn',
+            linkClassName: 'LinkedIn',
+            href: 'https://www.linkedin.com/in/olesia-sevostianova-929793100/'
+          },
+        ]
+      for pic in socials
+        li.socials__items
+          a.socials__link(
+            href= pic.href,
+            title= pic.title
+          )
+            svg.socials__svg-icon
+              use(xlink:href= pic.icon)
+  .hero__burger-menu
+    .burger-menu
+  .hero__title
+    img(src="", alt="").hero__title-pic
+  .user.hero__user
+    .user__pic
+      img(src="assets/images/avatar.jpg", alt="").user__pic-img
+    .user__description
+      .user__name Олeся Севостьянова
+      .user__info #{hero}
+  .arrow-down.hero__scroll-down
+  
