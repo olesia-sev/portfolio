@@ -22,8 +22,9 @@
   &__svg-icon {
     width: 31px;
     height: 22px;
-    opacity: .7;
-    transform: opacity .4;
+    fill: #fff;
+    opacity: .6;
+    transition: opacity .3s;
   }
 
   &__svg-icon:hover {

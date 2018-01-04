@@ -1,0 +1,169 @@
+.my-works {
+  height: 100%;
+}
+
+.block-section-title {
+  width: 100%;
+  height: 184px;
+  position: relative;
+  background-color: #fff;
+  text-align: center;
+}
+
+.title-background {
+  width: 505px;
+  height: 184px;
+  position: absolute;
+  left: 30%;
+  background: url('../images/icons/works_header.svg') no-repeat;  
+  background-size: contain;
+  opacity: .3;
+}
+
+.block-title-works {
+  padding-top: 50px;
+}
+
+.cotainer-works {
+  height: 100vh;
+}
+
+.block-slider {
+  width: 100%;
+  height: 750px;
+}
+
+.reviews {
+  height: 100%;
+  background: url(../images/works-bg.png) center center no-repeat;
+  background-size: cover;
+  //z-index: -5;
+
+  &__block {
+    margin-bottom: 63px;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    max-width: 395px;
+    margin-right: 35px;
+  }
+
+  &__text {
+    font-family: roboto, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $grey;
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    line-height: 1.5;
+  }
+
+  &__author--name {
+    font-family: roboto, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: $light;
+  }
+
+  &__author--profession {
+    @extend .reviews__author--name;
+    font-weight: 400;
+  }
+
+  &__author--pic {
+    width: 77px;
+    height: 77px;
+    margin-right: 20px;
+    clip-path: circle();
+  }
+
+  &__author--img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.reviews__form-block {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 150px;
+}
+
+.reviews__form {
+  width: 380px;
+  //height: 437px;
+  position: relative;
+}
+
+.reviews__form-menu {
+  display: flex;
+}
+
+.form {
+  &__input-contact {
+    width: 340px;
+    height: 45px;
+    border-radius: 5px;
+  }
+
+  &__input-contact--textarea {
+    height: 100%;
+    resize: none;
+  }
+
+  &__button {
+    @extend .form-menu__item;
+    border: none;
+    border-right: 1px solid rgba(#fff, .8);
+    font-family: roboto, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+  }
+
+  &__button--reset, .form__button--submit {
+    padding: 15px 54px;
+  } 
+
+  &__button--reset {
+    background-color: $green;
+    transition: .3s;
+  }
+
+  &__button--reset:hover {
+    background-color: darken($green, $amount: 5)
+  }
+}
+
+// .reviews__form:before {
+//   content: "";
+//   filter: blur(5px);
+//   background: url(../images/works-bg.png) center center no-repeat;
+//   background-size: cover;  
+// }
+
+.reviews__form--blur {
+  width: 100%;
+  height: 100%;
+  filter: blur(5px);
+  background: url(../images/works-bg.png) no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: -110px;
+  left: 0;
+  z-index: -1;
+}

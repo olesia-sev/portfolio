@@ -1,0 +1,147 @@
+.slider {
+  width: 100%;
+  //height: 750px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  &__description {
+    height: 100%;
+    width: 50%;
+    background-color: #f0efe9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__description--info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 39px;
+  }
+
+  &__text {
+    font-family: roboto, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: $light;
+    text-transform: uppercase;
+    margin-bottom: 39px;
+  }
+
+  &__link-block {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+
+  &__link {
+    padding: 17px 21px 17px 41px;
+    position: relative;
+    background-color: $light;
+    color: #fff;
+    font-family: roboto, Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: .3s;
+  }
+
+  &__link:hover {
+    background-color: $green;
+  }
+
+  &__link--pic {
+    position: absolute;
+    left: 15px;
+    bottom: 14px;
+  }
+
+  &__main-pic {
+    width: 50%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #efebe0;
+  }
+
+  &__main-pic--block {
+    width: 100%;
+  }
+
+  &__main-pic--img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__menu {
+    width: 50%;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #efebe0;
+  }
+
+  &__btn-block {
+    width: 100%;
+    max-height: 225px;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+  }
+
+  &__menu--prev-img, .slider__menu--next-img {
+    width: 50%;
+    //height: 100%;
+    position: relative;
+  }
+
+  &__prev-pic--img, .slider__next-pic--img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__menu--prev, .slider__menu--next {
+    width: 43px;
+    height: 27px;
+    position: absolute;
+    top: 50%;
+    left: 43%;
+    z-index: 5;
+    transition: .4s;
+  }
+}
+
+.slider__menu--prev:hover, .slider__menu--next:hover {
+  transform: scale(1.3);
+} 
+
+.slider__menu--prev-img:after, .slider__menu--next-img:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color:rgba(182, 180, 174, 0.7);
+  transition: .3s;
+}
+
+.link-svg {
+  width: 20px;
+  height: 20px;
+}
+
+.arrow-down, .arrow-up {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}

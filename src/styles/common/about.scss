@@ -17,6 +17,7 @@
 
 .about__left-content {
   width: 50%;
+  margin-right: 49px;
 }
 
 .about__right {
@@ -25,8 +26,16 @@
   overflow: hidden;
 }
 
+.about__right-text {
+  margin-left: 20px;
+}
+
+.about__right-content {
+  margin-left: 20px;
+}
+
 .block-title {
-  font-family: bernier;
+  font-family: bernier_regular;
   font-weight: 400;
   font-size: 63px;
   color: $black;
@@ -34,7 +43,7 @@
 }
 
 .user-description__img {
-  width: 440px;
+  //width: 440px;
   height: 400px;
 }
 

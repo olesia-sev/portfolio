@@ -4,4 +4,78 @@ block variables
   -var title = 'Мои работы'
 
 block content
-  h1 Мои работы
+  .wrapper
+    include ../common/hero
+    main.section.my-works
+      include ../common/triangle
+      .container.container-works
+        .block-section-title
+          .title-background
+          .block-title.block-title-works Мои работы
+        .block-slider
+          .slider
+            .slider__description
+              .slider__description--info
+                .block-subtitle.slider__title Сайт школы онлайн образования
+                .slider__text html, css, javascript
+                .slider__link-block
+                  a(href="#").slider__link Посмотреть Сайт
+                    .slider__link--pic
+                      svg.link-svg
+                        use(xlink:href= 'assets/images/icons.svg#link')
+            .slider__main-pic
+              .slider__main-pic--block
+                img(src='assets/images/work-1.png', alt="скриншот сайта №1").slider__main-pic--img
+            .slider__menu
+              .slider__btn-block
+                .slider__menu--prev-img
+                  img(src='assets/images/work-1.png', alt="скриншот сайта №4").slider__prev-pic--img                
+                  .slider__menu--prev
+                    svg.arrow-down
+                        use(xlink:href= 'assets/images/icons.svg#arrow_down')                    
+                .slider__menu--next-img
+                  img(src='assets/images/work-1.png', alt="скриншот сайта №2").slider__next-pic--img
+                  .slider__menu--prev
+                    svg.arrow-up
+                        use(xlink:href= 'assets/images/icons.svg#arrow_down')               
+    section.section.reviews
+      .block-title.reviews__title Что обо мне говорят
+      .reviews__block
+        ul.reviews__list
+          li.reviews__item
+            .reviews__text
+              p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+            .reviews__author
+              .reviews__author--pic
+                img(src="assets/images/dkoval.jpg", alt="аватар").reviews__author--img
+              .reviews__author--name-block
+                .reviews__author--name Ковальчук Дмитрий
+                .reviews__author--profession основатель LoftSchool
+          li.reviews__item
+            .reviews__text
+              p Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+            .reviews__author
+              .reviews__author--pic
+                img(src="assets/images/vsabantsev.png", alt="аватар").reviews__author--img
+              .reviews__author--name-block
+                .reviews__author--name Сабанцев Владимир
+                .reviews__author--profession преподаватель
+      .reviews__form-block
+        .reviews__form
+          .reviews__form--blur
+          .form.form-contact
+            .form__title Связаться со мной
+            .form__row
+              label(for="").form__label
+                input(type="text", name="" placeholder="Имя").form__input.form__input-contact
+            .form__row
+              label(for="").form__label
+                input(type="email", name="" placeholder="Email").form__input.form__input-contact
+            .form__row
+              label(for="").form__label
+                textarea(name="for__msg", id="for__msg", cols="30", rows="8" placeholder="Ваше сообщение").form__input.form__input-contact.form__input-contact--textarea
+            .reviews__form-menu
+              input(type="submit", value="Отправить" name="form_submit").form__button.form__button--submit
+              input(type="reset", value="Очистить" name="form_reset").form__button.form__button--reset
+  include ../common/footer
+

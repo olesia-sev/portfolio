@@ -35,7 +35,7 @@ const paths = {
     dest: 'build/assets/scripts/'
   },
   fonts: {
-    src: 'src/fonts/**/*.ttf',
+    src: 'src/fonts/woff/**/*.*',
     dest: 'build/assets/fonts/'
   }
 }
@@ -106,6 +106,12 @@ function images() {
       .pipe(gulp.dest(paths.images.dest));
 }
 
+//переносим шрифты
+function fonts() {
+  return gulp.src(paths.fonts.src)
+      .pipe(gulp.dest(paths.fonts.dest));
+}
+
 //scripts, webpack
 function scripts() {
   return gulp.src('src/scripts/app.js')
@@ -121,6 +127,8 @@ exports.clean = clean;
 
 exports.images = images;
 
+exports.fonts = fonts;
+
 exports.svg = svg;
 
 exports.scripts = scripts;
@@ -133,6 +141,6 @@ exports.server = server;
 
 gulp.task('default', gulp.series(
   clean,
-  gulp.parallel(styles, templates, images, svg, scripts),
+  gulp.parallel(styles, templates, images, fonts, svg, scripts),
   gulp.parallel(watch, server)
 ));

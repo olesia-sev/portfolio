@@ -1,4 +1,5 @@
 @import 'normalize';
+@import '_misc/fonts';
 
 //colors
 $black: #373e42;
@@ -7,16 +8,16 @@ $green: #009688;
 $light: #00bfa5;
 
 html {
-  width: 100%;
-  height: 100%;
+  height: 100vh;
+  min-width: 300px;
 }
 
 body {
+  //height: 100vh;
+  min-width: 300px;
   position: relative;
   margin: 0;
   padding: 0;
-  height: 100%;
-  width: 100%;
   background: #fff;
  // overflow: hidden;
 }
@@ -40,10 +41,19 @@ a {
 
 .wrapper {
   width: 100%;
-  height: 100%;
+  // height: 100%;
   position: relative;
   max-width: 1800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+.section {
+  height: 100vh;
+  position: relative;
+}
+
 
 @import 'common/burger_menu';
 @import 'common/socials';
@@ -52,4 +62,7 @@ a {
 @import 'common/footer';
 @import 'common/blog';
 @import 'common/welcome';
-@import '_misc/fonts';
+@import 'common/my-works';
+@import 'common/slider';
+@import 'common/skills';
+

@@ -11,9 +11,9 @@
     <div class="container-welcome welcome">
       <div class="welcome__auth-btn"><a class="auth-btn" href>Авторизоваться</a></div>
       <div class="welcome__form-wrapper">
-        <div class="welcome__form">
+        <div class="welcome__form welcome__form--front">
           <div class="welcome__form-user">
-            <div class="user__pic"><img class="user__pic-img" src="assets/images/avatar.jpg" alt=""></div>
+            <div class="user__pic"><img class="user__pic-img" src="assets/images/avatar.jpg" alt="моё фото"></div>
             <div class="user__description">
               <div class="user__name user__name--black">Олeся Севостьянова</div>
               <div class="user__info user__info--black">Личный сайт веб-разработчика</div>
@@ -22,24 +22,79 @@
           <div class="welcome__form-socials">
             <ul class="socials">
               <li class="socials__items"><a class="socials__link" href="https://vk.com/olesia_sev" title="ВКонтакте">
-                  <svg class="socials__svg-icon">
+                  <svg class="socials__svg-icon welcome__socials-svg">
                     <use xlink:href="assets/images/icons.svg#vk"></use>
                   </svg></a></li>
               <li class="socials__items"><a class="socials__link" href="https://github.com/olesia-sev" title="GitHub">
-                  <svg class="socials__svg-icon">
+                  <svg class="socials__svg-icon welcome__socials-svg">
                     <use xlink:href="assets/images/icons.svg#github"></use>
                   </svg></a></li>
               <li class="socials__items"><a class="socials__link" href="https://www.linkedin.com/in/olesia-sevostianova-929793100/" title="LinkedIn">
-                  <svg class="socials__svg-icon">
+                  <svg class="socials__svg-icon welcome__socials-svg">
                     <use xlink:href="assets/images/icons.svg#in"></use>
                   </svg></a></li>
             </ul>
           </div>
           <div class="welcome__form-menu">
             <ul class="form-menu__list">
-              <li class="form-menu__item"><a class="form-menu__link" href="my-works.html">Мои работы   </a></li>
-              <li class="form-menu__item"><a class="form-menu__link" href="about.html">Обо мне   </a></li>
-              <li class="form-menu__item"><a class="form-menu__link" href="blog.html">Блог   </a></li>
+              <li class="form-menu__item"><a class="form-menu__link" href="my-works.html">Мои работы</a></li>
+              <li class="form-menu__item"><a class="form-menu__link" href="about.html">Обо мне</a></li>
+              <li class="form-menu__item"><a class="form-menu__link" href="blog.html">Блог</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="welcome__form welcome__form--back">
+          <div class="form__title">Авторизуйтесь</div>
+          <div class="form-auth">
+            <form class="form" action="">
+              <div class="form__row">
+                <label class="form__label">
+                  <div class="form__pic">
+                    <svg class="form__svg">
+                      <use xlink:href="assets/images/icons.svg#login"></use>
+                    </svg>
+                  </div>
+                  <input class="form__input form__login" type="text" name="" placeholder="Логин">
+                </label>
+              </div>
+              <div class="form__row">
+                <label class="form__label">
+                  <div class="form__pic">
+                    <svg class="form__svg">
+                      <use xlink:href="assets/images/icons.svg#password"></use>
+                    </svg>
+                  </div>
+                  <input class="form__input form__password" type="password" name="" placeholder="Пароль">
+                </label>
+              </div>
+              <div class="form__row">
+                <label class="form__label--checkbox">
+                  <input class="form__check" type="checkbox" checked value="Я не робот" name="">
+                  <div class="form__check--fake"></div>
+                  <div class="input__title">Я человек</div>
+                </label>
+              </div>
+              <div class="form__row">
+                <div class="radio__title">Вы точно не робот?</div>
+                <div class="radio__row">
+                  <label class="form__label--checkbox">
+                    <input class="form__radio" type="radio" name="robot">
+                    <div class="form__radio-fake"></div>
+                    <div class="input__title">Да</div>
+                  </label>
+                  <label class="form__label--checkbox">  
+                    <input class="form__radio" type="radio" name="robot">
+                    <div class="form__radio-fake">               </div>
+                    <div class="input__title">Не уверен</div>
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="form-auth__menu">
+            <ul class="form-menu__list">
+              <li class="form-menu__item"><a class="form-menu__link" href="index.html">На главную</a></li>
+              <li class="form-menu__item"><a class="form-menu__link" href="admin.html">Войти</a></li>
             </ul>
           </div>
         </div>

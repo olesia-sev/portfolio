@@ -8,10 +8,10 @@ block content
     .welcome__auth-btn
       a.auth-btn(href=) Авторизоваться
     .welcome__form-wrapper
-      .welcome__form
+      .welcome__form.welcome__form--front
         .welcome__form-user
           .user__pic
-            img(src="assets/images/avatar.jpg", alt="").user__pic-img
+            img(src="assets/images/avatar.jpg", alt="моё фото").user__pic-img
           .user__description
             .user__name.user__name--black Олeся Севостьянова
             .user__info.user__info--black Личный сайт веб-разработчика
@@ -44,7 +44,7 @@ block content
                   href= pic.href,
                   title= pic.title
                 )
-                  svg.socials__svg-icon
+                  svg.socials__svg-icon.welcome__socials-svg
                     use(xlink:href= pic.icon)
         .welcome__form-menu
           ul.form-menu__list
@@ -69,6 +69,57 @@ block content
             for item in items
               li.form-menu__item
                 a.form-menu__link(href=item.href)
-                  | #{item.text}   
+                  | #{item.text}
+      .welcome__form.welcome__form--back
+        .form__title Авторизуйтесь
+        .form-auth
+          form.form(action="")
+            .form__row
+              label.form__label
+                .form__pic
+                  svg.form__svg
+                    use(xlink:href='assets/images/icons.svg#login')
+                input(type="text", name="" placeholder="Логин").form__input.form__login
+            .form__row
+              label.form__label
+                .form__pic
+                  svg.form__svg
+                    use(xlink:href='assets/images/icons.svg#password')
+                input(type="password", name="" placeholder="Пароль").form__input.form__password
+            .form__row
+              label.form__label--checkbox
+                input(type="checkbox" checked value="Я не робот" name="").form__check
+                .form__check--fake
+                .input__title Я человек
+            .form__row
+              .radio__title Вы точно не робот?
+              .radio__row
+                label.form__label--checkbox
+                  input(type="radio", name="robot").form__radio
+                  .form__radio-fake
+                  .input__title Да
+                label.form__label--checkbox   
+                  input(type="radio", name="robot").form__radio
+                  .form__radio-fake                
+                  .input__title Не уверен
+        .form-auth__menu
+          ul.form-menu__list
+            -
+              var auth_items = [
+                {
+                  text: 'На главную',
+                  linkClassName: 'to_main',
+                  href: 'index.html'
+                },
+                {
+                  text: 'Войти',
+                  linkClassName: 'enter_btn',
+                  href: 'admin.html'
+                },
+              ]
+            for item in auth_items
+              li.form-menu__item
+                a.form-menu__link(href=item.href)
+                  | #{item.text}
     .welcome__footer
       .welcome__footer-text &copy; Олеся Севостьянова | создано с любовью в LoftSchool | 2018
