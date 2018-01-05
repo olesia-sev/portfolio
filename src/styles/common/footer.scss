@@ -22,6 +22,11 @@
     align-items: center;
     border-bottom: 1px solid rgba(#fff, .15);
     padding-bottom: 15px;
+
+    @include tablets {
+      flex-direction: column;
+      text-align: center;
+    }
   }
 
   &__row:last-child {
@@ -31,17 +36,33 @@
 
   &__col-left {
     width: 40%;
+    display: flex;
+
+    @include tablets {
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 23px;
+    }
   }
 
   &__col-right {
     width: 40%;
     display: flex;
     justify-content: flex-end;
+
+    @include tablets {
+      width: 100%;
+      justify-content: center;
+    }
   }
 
   &__menu-list {
     display: flex;
     justify-content: space-between;
+
+    @include tablets {
+      justify-content: space-around;
+    }
   }
 
   &__menu-link {

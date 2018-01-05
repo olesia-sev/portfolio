@@ -6,6 +6,11 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 15px;
+
+    @include tablets {
+      justify-content: center;
+      align-items: center;
+    }
   }
 }
 

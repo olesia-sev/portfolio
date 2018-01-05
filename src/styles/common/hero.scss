@@ -6,9 +6,9 @@
 
 .user {
   position: absolute;
-  //top: 50%;
-  //left: 50%;
-  transform: translate(150%, 60%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
 
   &__description {
@@ -34,4 +34,19 @@
   width: 140px;
   height: 140px;
   border-radius: 50%;
+}
+
+.hero-title--pic {
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.hero-title--svg {
+  width: 100%;
+  height: 100%;
+  opacity: .1;
 }

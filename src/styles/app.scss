@@ -1,5 +1,12 @@
+// resolutions
+$desktop: 1200px;
+//$laptop: 992px;
+$tablets: 768px;
+$phones: 480px;
+
 @import 'normalize';
 @import '_misc/fonts';
+@import '_misc/mixins';
 
 //colors
 $black: #373e42;
@@ -13,13 +20,12 @@ html {
 }
 
 body {
-  //height: 100vh;
+  height: 100vh;
   min-width: 300px;
   position: relative;
   margin: 0;
   padding: 0;
   background: #fff;
- // overflow: hidden;
 }
 
 ul {
@@ -50,7 +56,7 @@ a {
 }
 
 .section {
-  height: 100vh;
+  //height: 100vh;
   position: relative;
 }
 
