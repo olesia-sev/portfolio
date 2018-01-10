@@ -4,6 +4,11 @@
   left: 30px;
   display: flex;
   flex-direction: row;
+
+  @include phones {
+    top: 12px;
+    left: 10px;
+  }
 }
 
 .socials {
@@ -25,6 +30,11 @@
     fill: #fff;
     opacity: .6;
     transition: opacity .3s;
+
+    @include phones {
+      width: 25px;
+      height: 14px;
+    }
   }
 
   &__svg-icon:hover {

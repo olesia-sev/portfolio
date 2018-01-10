@@ -1,13 +1,58 @@
+.parallax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  @include tablets {
+    display: none;
+  }
+
+  &__layer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    //will-change: transform;
+    @include tablets {
+      display: none;
+    }
+  }
+
+  &__img {
+    //height: 100vh;
+    position: absolute;
+    bottom: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include tablets {
+      display: none;
+    }
+  }
+}
+
 .welcome {
   width: 100%;
   height: 100vh;
   position: relative;
-  background: url(../images/main-bg.jpg) center center no-repeat;
-  background-size: cover;
 
   @include tablets {
+    background: url(../images/main-bg.jpg) center center no-repeat;
+    background-size: cover;
     min-height: 768px;
   } 
+
+  @include phones {
+    min-height: 320px;
+    width: 100%;
+    height: 100%;
+  }
 
   &__auth-btn {
     position: absolute;
@@ -18,9 +63,23 @@
     border-radius: 7px;
     cursor: pointer;
     transition: .3s;
+
+    @include phones {
+      top: 10px;
+      right: 19px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   &__auth-btn:hover {
+    background-color: #fff;
+      .auth-btn {
+        color: $light;
+      }
+  }
+
+  &__auth-btn--active {
     background-color: #fff;
       .auth-btn {
         color: $light;
@@ -36,6 +95,7 @@
   &__form-socials {
     display: flex;
     justify-content: center;
+    margin-bottom: 30px;
   }
 
   &__footer {
@@ -46,9 +106,12 @@
     transform: translateX(-50%);
     color: #fff;
     font-family: roboto, Arial, Helvetica, sans-serif;
-    font-size: 16px;
     font-weight: 300;
     text-align: center;
+
+    @include phones {
+      bottom: 8px;
+    }
   }
 
   &__socials-svg {
@@ -64,7 +127,6 @@
 
 .auth-btn {
   font-family: roboto, Arial, Helvetica, sans-serif;
-  font-size: 16px;
   font-weight: 500;
   color: #fff;
 }
@@ -79,6 +141,11 @@
   background-color: rgba(#fff, .85);
   border-radius: 5px;
   overflow: hidden;
+
+  @include phones {
+    width: 94vw;
+
+  }
 }
 
 .welcome__form {
@@ -86,22 +153,21 @@
   flex-direction: column;
   height: 370px;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: center;
   overflow: hidden;
 }
 
 .welcome__form--front {
-  //transform: rotateY(180deg);
   backface-visibility: hidden;
   position: absolute;
+
+  @include phones {
+    justify-content: center;
+  }
 }
 
 .welcome__form--front-active {
   transform: rotateY(180deg);
-}
-
-.welcome__form--back-active {
-  transform: rotateY(0deg);
 }
 
 .welcome__form--back {
@@ -109,14 +175,42 @@
   backface-visibility: hidden;
 }
 
+.welcome__form--back-active {
+  transform: none;
+}
+
 .user__name--black {
   color: $grey;
   font-size: 28px;
+
+  @include phones {
+    font-size: 21px;
+  }
 } 
+
+.user__pic {
+  margin-bottom: 24px;
+
+  @include phones {
+    margin-bottom: 24px;
+  }
+}
+
+.user__description {
+  margin-bottom: 28px;
+  
+  @include phones {
+    margin-bottom: 28px;
+  }
+}
 
 .user__info--black {
   color: $grey;
   font-weight: 400;
+
+  @include phones {
+    font-size: 14px;
+  }
 }
 
 .form-menu {
@@ -132,6 +226,10 @@
     border-right: 1px solid rgba(#fff, .85);
     cursor: pointer;
     transition: .3s;
+
+    @include phones {
+      padding: 15px 10px;
+    }
   }
 
   &__item:hover {
@@ -153,6 +251,10 @@
     font-weight: 500;
     color: #fff;
     white-space: nowrap;
+
+    @include phones {
+      font-size: 14px;
+    }
   }
 }
 
@@ -167,6 +269,7 @@
     color: $grey;
     text-transform: uppercase;
     text-align: center;
+    margin-top: 29px;
   }
 
   &__row {
@@ -210,6 +313,7 @@
     border: 1px solid transparent;
     border-radius: 0 5px 5px 0;
     outline-color: $light;
+    width: 80%;
   }
 
   &__radio {
@@ -266,12 +370,6 @@
   }
 }
 
-// .form__input:focus {
-//   .form__svg {
-//     fill: $light;
-//   } 
-// }
-
 .form__radio:checked+.form__radio-fake:after {
   width: 7px;
   height: 7px;
@@ -307,4 +405,15 @@
   font-size: 16px;
   font-weight: 400;
   color: $grey;
+}
+
+.form-auth {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.form-auth__menu {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }

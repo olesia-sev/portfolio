@@ -39,7 +39,11 @@ block content
                     svg.arrow-up
                         use(xlink:href= 'assets/images/icons.svg#arrow_down')               
     section.section.reviews
+      .reviews__background-wrapper
+        img(src="assets/images/works-bg.png", alt="").reviews__background-image
       .block-title.reviews__title Что обо мне говорят
+        svg.reviews__title--background
+         use(xlink:href= 'assets/images/icons.svg#about_header').reviews__title--background-svg
       .reviews__block
         ul.reviews__list
           li.reviews__item
@@ -62,7 +66,8 @@ block content
                 .reviews__author--profession преподаватель
       .reviews__form-block
         .reviews__form
-          .reviews__form--blur
+          .blur-wrapper
+           .reviews__form--blur
           .form.form-contact
             .form__title Связаться со мной
             .form__row

@@ -1,7 +1,46 @@
+.scroll-parallax {
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  perspective: 100px;
+
+  &__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+$layers: 10;
+
+@for $layersNum from $layers through 1 {
+  .scroll-parallax__layer:nth-child(#{$layersNum}) {
+    $currentLayer: $layers - $layersNum;
+    $perspective: -$currentLayer * 50px;
+    $scale: $currentLayer * .5 + 1;
+    transform: translateZ($perspective) scale($scale);
+  }
+}
+
 .hero {
   height: 100vh;
-  background: url(../images/pages-bg.jpg) center center no-repeat;
-  background-size: cover;
+ // background: url(../images/pages-bg.jpg) center center no-repeat;
+  //background-size: cover;
 }
 
 .user {
@@ -10,6 +49,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+
+  @include phones {
+    width: 100%;
+  }
 
   &__description {
     text-align: center;
@@ -20,6 +63,11 @@
     font-family: roboto;
     font-size: 35px;
     font-weight: 500;
+
+    @include phones {
+      font-size: 21px;
+      margin-bottom: 8px;
+    }
   }
 
   &__info {
@@ -27,6 +75,10 @@
     font-family: roboto;
     font-size: 16px;
     font-weight: 300;
+
+    @include phones {
+      font-size: 14px;
+    }
   }
 }
 
@@ -34,6 +86,12 @@
   width: 140px;
   height: 140px;
   border-radius: 50%;
+}
+
+.hero__title {
+  @include phones {
+    display: none;
+  }
 }
 
 .hero-title--pic {

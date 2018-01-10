@@ -2,7 +2,8 @@
 $desktop: 1200px;
 //$laptop: 992px;
 $tablets: 768px;
-$phones: 480px;
+$phones480: 480px;
+$phones: 320px;
 
 @import 'normalize';
 @import '_misc/fonts';
@@ -26,6 +27,11 @@ body {
   margin: 0;
   padding: 0;
   background: #fff;
+  font-size: 16px;
+
+  @include phones {
+    font-size: 14px;
+  }
 }
 
 ul {

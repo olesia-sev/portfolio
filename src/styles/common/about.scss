@@ -22,6 +22,10 @@
     justify-content: center;
     align-items: center;
   }
+
+  @include phones {
+    min-height: 697px;
+  }
 }
 
 .about__left-title {
@@ -31,6 +35,12 @@
 .about__left-content {
   width: 50%;
   margin-right: 49px;
+
+  @include phones {
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+  }
 }
 
 .about__right {
@@ -45,14 +55,26 @@
     justify-content: center;
     align-items: center;
   }
+
+  @include phones {
+    padding-top: 30px;
+  }
 }
 
 .about__right-text {
   margin-left: 20px;
+
+  @include phones {
+    margin: 0;
+  }
 }
 
 .about__right-content {
   margin-left: 20px;
+
+  @include phones {
+    margin: 0;
+  }
 }
 
 .block-title {
@@ -60,7 +82,11 @@
   font-weight: 400;
   font-size: 63px;
   color: $black;
-  text-transform: uppercase;  
+  text-transform: uppercase;
+
+  @include phones {
+    font-size: 35px;
+  }
 }
 
 .user-description__img {
@@ -77,11 +103,22 @@
   text-align: center;
 }
 
+.block-subtitle {
+  @include phones {
+    font-size: 21px;
+  }
+}
+
 .text-content {
   font-family: roboto;
   font-weight: 400;
   font-size: 16px;
   color: $grey;
+
+  @include phones {
+    font-size: 14px;
+    padding: 10px;
+  }
 }
 
 .map {

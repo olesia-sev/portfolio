@@ -17,6 +17,12 @@
 .skills-row {
   display: flex;
 
+  @include phones {
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+  }
+
   &__item {
     margin-right: 20px;
   }

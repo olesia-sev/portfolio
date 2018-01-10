@@ -8,6 +8,11 @@
   position: relative;
   background-color: #fff;
   text-align: center;
+
+  @include phones {
+    height: 96px;
+    margin-bottom: 39px;
+  }
 }
 
 .title-background {
@@ -18,7 +23,11 @@
   transform: translateX(-50%);
   background: url('../images/icons/works_header.svg') no-repeat;  
   background-size: contain;
-  opacity: .3;
+  opacity: .1;
+
+  @include phones {
+    width: 100%;
+  }
 }
 
 .block-title-works {
@@ -40,9 +49,26 @@
 
 .reviews {
   height: 100%;
-  background: url(../images/works-bg.png) center center no-repeat;
+  // background: url(../images/works-bg.png) center center no-repeat;
   background-size: cover;
-  //z-index: -5;
+
+  &__background {
+    &-wrapper {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      min-width: 900px;
+      z-index: -5;
+    }
+
+    &-image {
+      width: 100%;
+    }
+  }
 
   &__block {
     margin-bottom: 63px;
@@ -50,12 +76,28 @@
 
   &__title {
     text-align: center;
+    margin: 69px 0;
+  }
+
+  &__title--background {
+    width: 82%;
+    height: 184px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: .2;
   }
 
   &__list {
     width: 100%;
     display: flex;
     justify-content: center;
+
+    @include phones {
+      flex-direction: column;
+      margin-left: 10px;
+    }
   }
 
   &__item {
@@ -65,7 +107,7 @@
 
   &__text {
     font-family: roboto, Arial, Helvetica, sans-serif;
-    font-size: 16px;
+   // font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
     color: $grey;
@@ -79,7 +121,7 @@
 
   &__author--name {
     font-family: roboto, Arial, Helvetica, sans-serif;
-    font-size: 16px;
+   // font-size: 16px;
     font-weight: 700;
     color: $light;
   }
@@ -110,8 +152,15 @@
 
 .reviews__form {
   width: 380px;
-  //height: 437px;
-  position: relative;
+  height: 437px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+
+  @include phones {
+    width: 94vw;
+  }
 }
 
 .reviews__form-menu {
@@ -142,6 +191,10 @@
 
   &__button--reset, .form__button--submit {
     padding: 15px 54px;
+
+    @include phones {
+      padding: 15px 37px;
+    }
   } 
 
   &__button--reset {
@@ -154,21 +207,21 @@
   }
 }
 
-// .reviews__form:before {
-//   content: "";
-//   filter: blur(5px);
-//   background: url(../images/works-bg.png) center center no-repeat;
-//   background-size: cover;  
-// }
+.blur-wrapper {
+  width: 380px;
+  height: 437px;
+  border-radius: 5px;
+  position: absolute;
+  overflow: hidden;
+  z-index: -5;
+}
 
 .reviews__form--blur {
   width: 100%;
   height: 100%;
-  filter: blur(5px);
-  background: url(../images/works-bg.png) no-repeat;
-  background-size: cover;
-  position: absolute;
-  top: -110px;
-  left: 0;
-  z-index: -1;
+  filter: blur(20px);
+  background: url(../images/works-bg.png) center no-repeat;
+  // background-size: 1207px;
+  // background-position: -426px -345px;
+  //position: relative;
 }
