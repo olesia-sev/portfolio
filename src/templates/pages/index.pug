@@ -123,7 +123,7 @@ block content
               ]
             for item in auth_items
               li.form-menu__item
-                a.form-menu__link(href=item.href)
+                a.form-menu__link(href=item.href class= item.linkClassName)
                   | #{item.text}
     .welcome__footer
       .welcome__footer-text &copy; Олеся Севостьянова | создано с любовью в LoftSchool | 2018

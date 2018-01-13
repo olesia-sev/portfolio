@@ -1,0 +1,31 @@
+.full-screen-menu
+  .full-screen-menu__wrapper
+    //- .hero__burger-menu
+    //-   .burger-menu__line-1
+    //-   .burger-menu__line-2
+    //-   .burger-menu__line-3
+    .full-screen-menu__left
+    .full-screen-menu__right
+    ul.full-screen-menu__list
+      -
+        var menu = [
+          {
+            title: 'Мои работы',
+            href: 'my-works.html'
+          },
+          {
+            title: 'Обо мне',
+            href: 'about.html'
+          },
+          {
+            title: 'Блог',
+            href: 'blog.html'
+          },
+          {
+            title: 'Авторизация',
+            href: 'admin'
+          },
+        ]
+      for i in menu
+        li.full-screen-menu__item
+          a.menu-link(href= i.href) #{i.title}

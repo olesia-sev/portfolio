@@ -1,11 +1,13 @@
 .footer {
-  position: absolute;
-  // width: 100vw;
+  //position: absolute;
+  width: 100vw;
   // height: 15vh;
+  position: absolute;
+  top: auto;
   bottom: 0;
   background-color: rgba($black, .7);
   height: 150px;
-  margin-bottom: -150px;
+  z-index: 0;
 
   &__container {
     width: 100%;
@@ -32,10 +34,11 @@
   &__row:last-child {
     border-bottom: none;
     padding-bottom: 0;
+    padding-top: 25px;
   }
 
   &__col-left {
-    width: 40%;
+    width: 50%;
     display: flex;
 
     @include tablets {
@@ -65,6 +68,10 @@
     }
   }
 
+  &__menu-item {
+    margin-right: 10px;
+  }
+
   &__menu-link {
     font-family: roboto;
     font-weight: 500;
@@ -92,5 +99,16 @@
 
   &:hover {
     fill: #fff;
+  }
+}
+
+.text-link {
+  @extend .footer__text;
+  opacity: .8;
+  transition: .3s;
+
+  &:hover {
+    color: $black;
+    opacity: 1;
   }
 }

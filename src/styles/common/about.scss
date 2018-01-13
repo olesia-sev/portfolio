@@ -83,6 +83,7 @@
   font-size: 63px;
   color: $black;
   text-transform: uppercase;
+  text-align: center;
 
   @include phones {
     font-size: 35px;
@@ -142,6 +143,7 @@
   height: 290px;
   background-color: rgba(#fff, .7);
   border-radius: 5px;
+  z-index: 5;
 
   &__title {
     margin-top: 35px;

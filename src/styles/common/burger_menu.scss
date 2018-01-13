@@ -1,10 +1,12 @@
 .hero__burger-menu {
+  display: block;
   position: absolute;
-  top: 30px;
+  top: 44px;
   right: 30px;
   cursor: pointer;
   width: 40px;
   height: 35px;
+  z-index: 17;
 
   @include phones {
     top: 10px;
@@ -12,49 +14,47 @@
   }
 }
 
-.burger-menu {
+.burger-menu__line-1,
+.burger-menu__line-2,
+.burger-menu__line-3 
+{
+  position: absolute;
   width: 40px;
   height: 5px;
-  position: relative;
-  background-color: #fff;
+  background-color: white;
+  margin-bottom: 10px;
   border-radius: 3px;
   box-shadow: 1px 2px 9px 0px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
 
   @include phones {
     width: 25px;
     height: 4px;
   }
+}
 
-    &::before {
-      content: "";
-      width: 40px;
-      height: 5px;
-      position: absolute;
-      bottom: -28px;
-      background-color: #fff;
-      border-radius: 3px;
-      box-shadow: 1px 2px 9px 0px rgba(0, 0, 0, 0.4);
+.burger-menu__line-2 {
+  margin-top: 12px;
+}
 
-      @include phones {
-        width: 25px;
-        height: 4px;
-        bottom: -7px;
-      }
-    }
+.burger-menu__line-3 {
+  margin-top: 24px;
+}
 
-    &::after {
-      content: "";
-      width: 40px;
-      height: 5px;
-      position: absolute;
-      top: 14px;
-      background-color: #fff;
-      border-radius: 3px;
-      box-shadow: 1px 2px 9px 0px rgba(0, 0, 0, 0.4);
+.menu-on .burger-menu__line-1 {
+  transform: rotate(45deg);
+  margin-top: 8px;
+  z-index: 17;
+}
 
-      @include phones {
-        width: 25px;
-        height: 4px;
-      }
-    }
+.menu-on .burger-menu__line-3 {
+  transform: rotate(-45deg);
+  margin-top: 8px;
+  z-index: 17;
+}
+
+.menu-on .burger-menu__line-2 {
+  transform: scale(0);
+  opacity: 0;
+  z-index: 17;
 }

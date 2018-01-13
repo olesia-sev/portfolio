@@ -2,9 +2,10 @@
 <html lang="RU-ru">
   <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge,chrome=1" http-equiv="X-UA-Compatible">
     <title>Добро пожаловать!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="assets/styles/app.min.css">
   </head>
   <body>
@@ -105,8 +106,8 @@
           </div>
           <div class="form-auth__menu">
             <ul class="form-menu__list">
-              <li class="form-menu__item"><a class="form-menu__link" href="index.html">На главную</a></li>
-              <li class="form-menu__item"><a class="form-menu__link" href="admin.html">Войти</a></li>
+              <li class="form-menu__item"><a class="form-menu__link to_main" href="index.html">На главную</a></li>
+              <li class="form-menu__item"><a class="form-menu__link enter_btn" href="admin.html">Войти</a></li>
             </ul>
           </div>
         </div>
@@ -116,6 +117,8 @@
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTra4xCaEnsFJbNKtLikYUvJZ39GZ9nyo&amp;callback=initMap"></script>
+    <!--script(src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript")-->
     <script src="assets/scripts/app.js"></script>
   </body>
 </html>

@@ -13,11 +13,13 @@
   }
 
   &__layer {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     //will-change: transform;
     @include tablets {
       display: none;
@@ -25,7 +27,7 @@
   }
 
   &__img {
-    //height: 100vh;
+    height: 110%;
     position: absolute;
     bottom: 0;
     top: 50%;
@@ -80,10 +82,7 @@
   }
 
   &__auth-btn--active {
-    background-color: #fff;
-      .auth-btn {
-        color: $light;
-      }
+    transform: scale(0);
   }
 
   &__form-menu {
@@ -138,8 +137,6 @@
   top: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  background-color: rgba(#fff, .85);
-  border-radius: 5px;
   overflow: hidden;
 
   @include phones {
@@ -160,6 +157,9 @@
 .welcome__form--front {
   backface-visibility: hidden;
   position: absolute;
+  background-color: rgba(#fff, .85);
+  border-radius: 5px;
+  transition: .5s;
 
   @include phones {
     justify-content: center;
@@ -173,6 +173,9 @@
 .welcome__form--back {
   transform: rotateY(180deg);
   backface-visibility: hidden;
+  background-color: rgba(#fff, .85);
+  border-radius: 5px;
+  transition: .5s;
 }
 
 .welcome__form--back-active {

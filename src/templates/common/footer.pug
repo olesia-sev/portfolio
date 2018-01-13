@@ -4,9 +4,28 @@ footer.footer
       .footer__col.footer__col-left
         nav.footer__menu
           ul.footer__menu-list
-            each item in ['Мои работы', 'Обо мне', 'Блог', 'Авторизация']
+            -
+              var menu = [
+                {
+                  title: 'Мои работы',
+                  href: 'my-works.html'
+                },
+                {
+                  title: 'Обо мне',
+                  href: 'about.html'
+                },
+                {
+                  title: 'Блог',
+                  href: 'blog.html'
+                },
+                {
+                  title: 'Авторизация',
+                  href: 'admin'
+                },
+              ]
+            for i in menu
               li.footer__menu-item
-                a(href="#" class=`footer__menu-link`) #{item}
+                a.footer__menu-link(href= i.href) #{i.title}
       .footer__col.footer__col-right
         ul.socials.socials-rounded
           - 
@@ -41,8 +60,8 @@ footer.footer
     .footer__row
       .footer__col.footer__col-left
         .footer__text
-          p Я веб-разработчик из Санкт-Петербурга, и этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool.
+          p Я веб-разработчик из Санкт-Петербурга, и этот сайт я сделала в рамках обучения в Школе онлайн образования <a href="http://loftschool.com" class="text-link"> LoftSchool</a>.
       .footer__col.footer__col-right
         .footer__text
-          p © Олeся Севостьянова | создано с любовью в LoftSchool | 2018
+          p © Олeся Севостьянова | создано с любовью в <a href="http://loftschool.com" class="text-link">LoftSchool</a> | 2018
           

@@ -51,6 +51,7 @@
   height: 100%;
   // background: url(../images/works-bg.png) center center no-repeat;
   background-size: cover;
+  background-color: #fff;
 
   &__background {
     &-wrapper {
@@ -62,7 +63,6 @@
       bottom: 0;
       left: 0;
       min-width: 900px;
-      z-index: -5;
     }
 
     &-image {
@@ -72,11 +72,13 @@
 
   &__block {
     margin-bottom: 63px;
+    z-index: 5;
   }
 
   &__title {
     text-align: center;
     margin: 69px 0;
+    z-index: 5;
   }
 
   &__title--background {
@@ -103,6 +105,7 @@
   &__item {
     max-width: 395px;
     margin-right: 35px;
+    z-index: 5;
   }
 
   &__text {
@@ -145,18 +148,21 @@
 }
 
 .reviews__form-block {
-  display: flex;
-  justify-content: center;
+  // display: flex;
+  // justify-content: center;
   margin-bottom: 150px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 5;
 }
 
 .reviews__form {
   width: 380px;
   height: 437px;
   position: absolute;
-  top: 50%;
   left: 50%;
-  transform: translate(-50%, 50%);
+  transform: translateX(-50%);
 
   @include phones {
     width: 94vw;

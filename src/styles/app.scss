@@ -21,13 +21,15 @@ html {
 }
 
 body {
-  height: 100vh;
+  //height: 100vh;
   min-width: 300px;
   position: relative;
   margin: 0;
   padding: 0;
   background: #fff;
   font-size: 16px;
+  background-color: #fff;
+  overflow-x: hidden;
 
   @include phones {
     font-size: 14px;
@@ -52,13 +54,15 @@ a {
 }
 
 .wrapper {
-  width: 100%;
+  width: 100vw;
   // height: 100%;
   position: relative;
-  max-width: 1800px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding-bottom: 150px;
+ // z-index: 1;
+  box-shadow: 0 10px 10px $black;
 }
 
 .section {
@@ -77,4 +81,6 @@ a {
 @import 'common/my-works';
 @import 'common/slider';
 @import 'common/skills';
+@import 'common/full_screen_menu';
+@import 'common/map';
 
