@@ -58,6 +58,7 @@ $(function() {
 
     $(".hero__burger-menu").toggleClass("menu-on");
     $(".full-screen-menu").toggleClass("full-screen-menu__active");
+    $('html, body').toggleClass("no-scroll");
   });
 });
 
@@ -75,6 +76,7 @@ $(function() {
       if (e.keyCode === 27) {
         $(".full-screen-menu").removeClass("full-screen-menu__active");
         $(".hero__burger-menu").removeClass("menu-on");
+        $('html, body').removeClass("no-scroll");
       }
     });
   });
