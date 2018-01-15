@@ -5,11 +5,22 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge,chrome=1" http-equiv="X-UA-Compatible">
     <title></title>
+    <link rel="shortcut icon" href="assets/images/fav_mount.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="assets/styles/app.min.css">
   </head>
   <body>
-    <div class="wrapper">
+    <div class="preloader" id="preloader" style="background-image: url(assets/images/preloader/bg.jpg);">
+      <div class="preloader__svg-cont">
+        <svg class="preloader__svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="144px" height="144px" viewBox="0 0 144 144" enable-background="new 0 0 144 144" xml:space="preserve">
+          <circle class="circle_1" opacity="0.4" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10" enable-background="new" cx="72" cy="71.999" r="70"></circle>
+          <circle class="circle_2" opacity="0.7" fill="none" stroke="#FFFFFF" stroke-width="3.8938" stroke-miterlimit="10" enable-background="new" cx="72" cy="72" r="55"></circle>
+          <circle class="circle_3" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10" cx="72" cy="72" r="40"></circle>
+          <text class="preloader__text" id="preloader__text" transform="matrix(1 0 0 1 51.5391 79.0127)" fill="#FFFFFF" font-family="'ArialMT'" font-size="24">0%</text>
+        </svg>
+      </div>
+    </div>
+    <div class="wrapper visually-hidden">
       <header class="section hero">
         <div class="scroll-parallax">
           <div class="scroll-parallax__layer"><img class="scroll-parallax__img" src="assets/images/parallax/layer_01.png" alt="фоновое изображение"></div>
@@ -74,7 +85,7 @@
           </div>
           <div class="block-slider">
             <div class="slider">
-              <div class="slider__description">
+              <div class="slider__description slider__slide--active" data-slide="1">
                 <div class="slider__description--info">
                   <div class="block-subtitle slider__title">Сайт школы онлайн образования</div>
                   <div class="slider__text">html, css, javascript</div>
@@ -86,20 +97,65 @@
                       </div></a></div>
                 </div>
               </div>
-              <div class="slider__main-pic">
+              <div class="slider__main-pic slider__slide--active" data-slide="1">
                 <div class="slider__main-pic--block"><img class="slider__main-pic--img" src="assets/images/work-1.png" alt="скриншот сайта №1"></div>
+              </div>
+              <div class="slider__description" data-slide="2">
+                <div class="slider__description--info">
+                  <div class="block-subtitle slider__title">Сайт школы онлайн образования-2</div>
+                  <div class="slider__text">html, css, javascript</div>
+                  <div class="slider__link-block"><a class="slider__link" href="#">Посмотреть Сайт
+                      <div class="slider__link--pic">
+                        <svg class="link-svg">
+                          <use xlink:href="assets/images/icons.svg#link"></use>
+                        </svg>
+                      </div></a></div>
+                </div>
+              </div>
+              <div class="slider__main-pic" data-slide="2">
+                <div class="slider__main-pic--block"><img class="slider__main-pic--img" src="http://fakeimg.pl/643x416/?text=2&amp;font=lobster" alt="скриншот сайта №2"></div>
+              </div>
+              <div class="slider__description" data-slide="3">
+                <div class="slider__description--info">
+                  <div class="block-subtitle slider__title">Сайт школы онлайн образования-3</div>
+                  <div class="slider__text">html, css, javascript</div>
+                  <div class="slider__link-block"><a class="slider__link" href="#">Посмотреть Сайт
+                      <div class="slider__link--pic">
+                        <svg class="link-svg">
+                          <use xlink:href="assets/images/icons.svg#link"></use>
+                        </svg>
+                      </div></a></div>
+                </div>
+              </div>
+              <div class="slider__main-pic" data-slide="3">
+                <div class="slider__main-pic--block"><img class="slider__main-pic--img" src="http://fakeimg.pl/643x416/?text=3&amp;font=lobster" alt="скриншот сайта №3"></div>
+              </div>
+              <div class="slider__description" data-slide="4">
+                <div class="slider__description--info">
+                  <div class="block-subtitle slider__title">Сайт школы онлайн образования-4</div>
+                  <div class="slider__text">html, css, javascript</div>
+                  <div class="slider__link-block"><a class="slider__link" href="#">Посмотреть Сайт
+                      <div class="slider__link--pic">
+                        <svg class="link-svg">
+                          <use xlink:href="assets/images/icons.svg#link"></use>
+                        </svg>
+                      </div></a></div>
+                </div>
+              </div>
+              <div class="slider__main-pic" data-slide="4">
+                <div class="slider__main-pic--block"><img class="slider__main-pic--img" src="http://fakeimg.pl/643x416/?text=4&amp;font=lobster" alt="скриншот сайта №4"></div>
               </div>
               <div class="slider__menu">
                 <div class="slider__btn-block">
-                  <div class="slider__menu--prev-img"><img class="slider__prev-pic--img" src="assets/images/work-1.png" alt="скриншот сайта №4">
+                  <div class="slider__menu--prev-img"><img class="slider__prev-pic--img" src="assets/images/work-1.png" alt="скриншот сайта №1" data-slide-thumb="1"><img class="slider__prev-pic--img" src="http://fakeimg.pl/643x416/?text=2&amp;font=lobster" alt="скриншот сайта №2" data-slide-thumb="2"><img class="slider__prev-pic--img" src="http://fakeimg.pl/643x416/?text=3&amp;font=lobster" alt="скриншот сайта №3" data-slide-thumb="3"><img class="slider__prev-pic--img slider__thumb--visible" src="http://fakeimg.pl/643x416/?text=4&amp;font=lobster" alt="скриншот сайта №4" data-slide-thumb="4">
                     <div class="slider__menu--prev">
                       <svg class="arrow-down">
                         <use xlink:href="assets/images/icons.svg#arrow_down">                   </use>
                       </svg>
                     </div>
                   </div>
-                  <div class="slider__menu--next-img"><img class="slider__next-pic--img" src="assets/images/work-1.png" alt="скриншот сайта №2">
-                    <div class="slider__menu--prev">
+                  <div class="slider__menu--next-img"><img class="slider__next-pic--img" src="assets/images/work-1.png" alt="скриншот сайта №1" data-slide-thumb="1"><img class="slider__next-pic--img slider__thumb--visible" src="http://fakeimg.pl/643x416/?text=2&amp;font=lobster" alt="скриншот сайта №2" data-slide-thumb="2"><img class="slider__next-pic--img" src="http://fakeimg.pl/643x416/?text=3&amp;font=lobster" alt="скриншот сайта №3" data-slide-thumb="3"><img class="slider__next-pic--img" src="http://fakeimg.pl/643x416/?text=4&amp;font=lobster" alt="скриншот сайта №4" data-slide-thumb="4">
+                    <div class="slider__menu--next">
                       <svg class="arrow-up">
                         <use xlink:href="assets/images/icons.svg#arrow_down">              </use>
                       </svg>
@@ -177,7 +233,7 @@
         </div>
       </section>
     </div>
-    <footer class="footer">
+    <footer class="footer visually-hidden">
       <div class="footer__container">
         <div class="footer__row">
           <div class="footer__col footer__col-left">
@@ -186,7 +242,7 @@
                 <li class="footer__menu-item"><a class="footer__menu-link" href="my-works.html">Мои работы</a></li>
                 <li class="footer__menu-item"><a class="footer__menu-link" href="about.html">Обо мне</a></li>
                 <li class="footer__menu-item"><a class="footer__menu-link" href="blog.html">Блог</a></li>
-                <li class="footer__menu-item"><a class="footer__menu-link" href="admin">Авторизация</a></li>
+                <li class="footer__menu-item"><a class="footer__menu-link" href="/">Авторизация</a></li>
               </ul>
             </nav>
           </div>

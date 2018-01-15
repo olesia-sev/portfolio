@@ -70,6 +70,13 @@ a {
   position: relative;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
+.visually-hidden {
+  visibility: hidden;
+}
 
 @import 'common/burger_menu';
 @import 'common/socials';
@@ -83,4 +90,5 @@ a {
 @import 'common/skills';
 @import 'common/full_screen_menu';
 @import 'common/map';
+@import 'common/preloader';
 

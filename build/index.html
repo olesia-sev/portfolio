@@ -5,11 +5,22 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge,chrome=1" http-equiv="X-UA-Compatible">
     <title>Добро пожаловать!</title>
+    <link rel="shortcut icon" href="assets/images/fav_mount.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="assets/styles/app.min.css">
   </head>
   <body>
-    <div class="container-welcome welcome">
+    <div class="preloader" id="preloader" style="background-image: url(assets/images/preloader/bg.jpg);">
+      <div class="preloader__svg-cont">
+        <svg class="preloader__svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="144px" height="144px" viewBox="0 0 144 144" enable-background="new 0 0 144 144" xml:space="preserve">
+          <circle class="circle_1" opacity="0.4" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10" enable-background="new" cx="72" cy="71.999" r="70"></circle>
+          <circle class="circle_2" opacity="0.7" fill="none" stroke="#FFFFFF" stroke-width="3.8938" stroke-miterlimit="10" enable-background="new" cx="72" cy="72" r="55"></circle>
+          <circle class="circle_3" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10" cx="72" cy="72" r="40"></circle>
+          <text class="preloader__text" id="preloader__text" transform="matrix(1 0 0 1 51.5391 79.0127)" fill="#FFFFFF" font-family="'ArialMT'" font-size="24">0%</text>
+        </svg>
+      </div>
+    </div>
+    <div class="container-welcome welcome visually-hidden">
       <div class="parallax" id="parallax">
         <div class="parallax__layer"><img class="parallax__img" src="assets/images/parallax/layer_01.png" alt="фоновое изображение"></div>
         <div class="parallax__layer"><img class="parallax__img" src="assets/images/parallax/layer_02.png" alt="фоновое изображение"></div>

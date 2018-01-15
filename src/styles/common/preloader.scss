@@ -1,0 +1,41 @@
+.preloader {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background-size: cover;
+
+  &__svg-cont {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__text {
+    font-family: roboto;
+  }
+}
+
+.circle_1,
+.circle_2,
+.circle_3 {
+  stroke-dasharray: .0010 282.6;
+  transition: stroke-dasharray 3s;
+  animation: load 3s linear;
+  animation-fill-mode: forwards;
+}
+
+.loading {
+  stroke-dasharray: 439.6 282.6;
+}
+
+@keyframes load {
+  to {
+    stroke-dasharray: 439.6 282.6;
+  }
+}

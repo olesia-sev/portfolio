@@ -4,7 +4,7 @@ block variables
   -var title = 'Мои работы'
 
 block content
-  .wrapper
+  .wrapper.visually-hidden
     include ../common/hero
     main.section.my-works
       include ../common/triangle
@@ -14,7 +14,7 @@ block content
           .block-title.block-title-works Мои работы
         .block-slider
           .slider
-            .slider__description
+            .slider__description(data-slide='1').slider__slide--active
               .slider__description--info
                 .block-subtitle.slider__title Сайт школы онлайн образования
                 .slider__text html, css, javascript
@@ -23,21 +23,98 @@ block content
                     .slider__link--pic
                       svg.link-svg
                         use(xlink:href= 'assets/images/icons.svg#link')
-            .slider__main-pic
+            .slider__main-pic(data-slide='1').slider__slide--active
               .slider__main-pic--block
                 img(src='assets/images/work-1.png', alt="скриншот сайта №1").slider__main-pic--img
+            .slider__description(data-slide='2')
+              .slider__description--info
+                .block-subtitle.slider__title Сайт школы онлайн образования-2
+                .slider__text html, css, javascript
+                .slider__link-block
+                  a(href="#").slider__link Посмотреть Сайт
+                    .slider__link--pic
+                      svg.link-svg
+                        use(xlink:href= 'assets/images/icons.svg#link')
+            .slider__main-pic(data-slide='2')
+              .slider__main-pic--block
+                img(src='http://fakeimg.pl/643x416/?text=2&font=lobster', alt="скриншот сайта №2").slider__main-pic--img
+            .slider__description(data-slide='3')
+              .slider__description--info
+                .block-subtitle.slider__title Сайт школы онлайн образования-3
+                .slider__text html, css, javascript
+                .slider__link-block
+                  a(href="#").slider__link Посмотреть Сайт
+                    .slider__link--pic
+                      svg.link-svg
+                        use(xlink:href= 'assets/images/icons.svg#link')
+            .slider__main-pic(data-slide='3')
+              .slider__main-pic--block
+                img(
+                  src='http://fakeimg.pl/643x416/?text=3&font=lobster', 
+                  alt="скриншот сайта №3"
+                ).slider__main-pic--img
+            .slider__description(data-slide='4')
+              .slider__description--info
+                .block-subtitle.slider__title Сайт школы онлайн образования-4
+                .slider__text html, css, javascript
+                .slider__link-block
+                  a(href="#").slider__link Посмотреть Сайт
+                    .slider__link--pic
+                      svg.link-svg
+                        use(xlink:href= 'assets/images/icons.svg#link')
+            .slider__main-pic(data-slide='4')
+              .slider__main-pic--block
+                img(src='http://fakeimg.pl/643x416/?text=4&font=lobster', alt="скриншот сайта №4").slider__main-pic--img
             .slider__menu
               .slider__btn-block
                 .slider__menu--prev-img
-                  img(src='assets/images/work-1.png', alt="скриншот сайта №4").slider__prev-pic--img                
+                  img(
+                    src='assets/images/work-1.png', 
+                    alt="скриншот сайта №1",
+                    data-slide-thumb="1"
+                  ).slider__prev-pic--img              
+                  img(
+                    src='http://fakeimg.pl/643x416/?text=2&font=lobster', 
+                    alt="скриншот сайта №2"
+                    data-slide-thumb="2"
+                  ).slider__prev-pic--img         
+                  img(
+                    src='http://fakeimg.pl/643x416/?text=3&font=lobster', 
+                    alt="скриншот сайта №3"
+                    data-slide-thumb="3"
+                  ).slider__prev-pic--img                
+                  img(
+                    src='http://fakeimg.pl/643x416/?text=4&font=lobster', 
+                    alt="скриншот сайта №4"
+                    data-slide-thumb="4"
+                  ).slider__prev-pic--img.slider__thumb--visible       
                   .slider__menu--prev
                     svg.arrow-down
-                        use(xlink:href= 'assets/images/icons.svg#arrow_down')                    
+                      use(xlink:href='assets/images/icons.svg#arrow_down')                    
                 .slider__menu--next-img
-                  img(src='assets/images/work-1.png', alt="скриншот сайта №2").slider__next-pic--img
-                  .slider__menu--prev
+                  img(
+                    src='assets/images/work-1.png', 
+                    alt="скриншот сайта №1"
+                    data-slide-thumb="1"
+                  ).slider__next-pic--img
+                  img(
+                    src='http://fakeimg.pl/643x416/?text=2&font=lobster', 
+                    alt="скриншот сайта №2"
+                    data-slide-thumb="2"
+                  ).slider__next-pic--img.slider__thumb--visible
+                  img(
+                    src='http://fakeimg.pl/643x416/?text=3&font=lobster', 
+                    alt="скриншот сайта №3"
+                    data-slide-thumb="3"
+                  ).slider__next-pic--img
+                  img(
+                    src='http://fakeimg.pl/643x416/?text=4&font=lobster', 
+                    alt="скриншот сайта №4"
+                    data-slide-thumb="4"
+                  ).slider__next-pic--img
+                  .slider__menu--next
                     svg.arrow-up
-                        use(xlink:href= 'assets/images/icons.svg#arrow_down')               
+                      use(xlink:href='assets/images/icons.svg#arrow_down')               
     section.section.reviews
       .reviews__background-wrapper
         img(src="assets/images/works-bg.png", alt="").reviews__background-image

@@ -1284,6 +1284,11 @@
 		C1094.091,114.191,1098.11,112.516,1104.812,108.94z M1094.761,106.931h-2.01v-1.34h2.01V106.931z M1109.501,178.956h-1.676v-1.34
 		h1.676V178.956z M1169.13,124.016h-1.34V121h1.34V124.016z"/>
 </g>
+</symbol><symbol id="preloader_round" viewBox="0 0 144 144">
+<circle opacity="0.4" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10" enable-background="new    " cx="72" cy="71.999" r="70"/>
+<circle opacity="0.7" fill="none" stroke="#FFFFFF" stroke-width="3.8938" stroke-miterlimit="10" enable-background="new    " cx="72" cy="72" r="55"/>
+<circle fill="none" stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10" cx="72" cy="72" r="40"/>
+<text transform="matrix(1 0 0 1 51.5391 79.0127)" fill="#FFFFFF" font-family="&apos;ArialMT&apos;" font-size="24">100</text>
 </symbol><symbol id="skype" viewBox="0 0 24 24">
 <g>
 	<path fill="#00BFA5" d="M18,24c-1.375,0-2.641-0.469-3.656-1.25C13.594,22.906,12.797,23,12,23C5.922,23,1,18.078,1,12
