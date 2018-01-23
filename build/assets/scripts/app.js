@@ -90,8 +90,8 @@ $(function() {
 
 //-----scroll-parallax
 $(function() {
-  $('.scroll-parallax').parallax({imageSrc: '/assets/images/pages-bg.jpg'});
-  $('.hero__user').parallax({imageSrc: '/assets/images/pages-bg.jpg'});
+  $('.scroll-parallax').parallax({imageSrc: 'assets/images/pages-bg.jpg'});
+  //$('.hero__user').parallax({imageSrc: 'assets/images/pages-bg.jpg'});
 });
 
 // skills, function on scroll

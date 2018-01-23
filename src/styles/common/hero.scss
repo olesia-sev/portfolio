@@ -32,16 +32,16 @@
   }
 }
 
-$layers: 10;
+// $layers: 10;
 
-@for $layersNum from $layers through 1 {
-  .scroll-parallax__layer:nth-child(#{$layersNum}) {
-    $currentLayer: $layers - $layersNum;
-    $perspective: -$currentLayer * 50px;
-    $scale: $currentLayer * .5 + 1;
-    transform: translateZ($perspective) scale($scale);
-  }
-}
+// @for $layersNum from $layers through 1 {
+//   .scroll-parallax__layer:nth-child(#{$layersNum}) {
+//     $currentLayer: $layers - $layersNum;
+//     $perspective: -$currentLayer * 50px;
+//     $scale: $currentLayer * .5 + 1;
+//     transform: translateZ($perspective) scale($scale);
+//   }
+// }
 
 .hero {
   height: 100vh;
