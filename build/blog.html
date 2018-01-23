@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="RU-ru">
   <head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <meta content="ie=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <title></title>
-    <link rel="shortcut icon" href="assets/images/fav_mount.png" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="assets/styles/app.min.css">
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="ie=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+    <title>Блог</title>
+    <link rel="shortcut icon" href="assets/images/fav_mount.png" type="image/png"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
+    <link rel="stylesheet" href="assets/styles/app.min.css"/>
   </head>
   <body>
     <div class="preloader" id="preloader" style="background-image: url(assets/images/preloader/bg.jpg);">
@@ -22,18 +22,7 @@
     </div>
     <div class="wrapper visually-hidden">
       <header class="section hero">
-        <div class="scroll-parallax">
-          <div class="scroll-parallax__layer"><img class="scroll-parallax__img" src="assets/images/parallax/layer_01.png" alt="фоновое изображение"></div>
-          <div class="scroll-parallax__layer"><img class="scroll-parallax__img" src="assets/images/parallax/layer_02.png" alt="фоновое изображение"></div>
-          <div class="scroll-parallax__layer"><img class="scroll-parallax__img" src="assets/images/parallax/layer_03.png" alt="фоновое изображение"></div>
-          <div class="scroll-parallax__layer"><img class="scroll-parallax__img" src="assets/images/parallax/layer_04.png" alt="фоновое изображение"></div>
-          <div class="scroll-parallax__layer"><img class="scroll-parallax__img" src="assets/images/parallax/layer_05.png" alt="фоновое изображение"></div>
-          <div class="scroll-parallax__layer"><img class="scroll-parallax__img" src="assets/images/parallax/layer_06.png" alt="фоновое изображение"></div>
-          <div class="scroll-parallax__layer"><img class="scroll-parallax__img" src="assets/images/parallax/layer_07.png" alt="фоновое изображение"></div>
-          <div class="scroll-parallax__layer"><img class="scroll-parallax__img" src="assets/images/parallax/layer_08.png" alt="фоновое изображение"></div>
-          <div class="scroll-parallax__layer"><img class="scroll-parallax__img" src="assets/images/parallax/layer_09.png" alt="фоновое изображение"></div>
-          <div class="scroll-parallax__layer"><img class="scroll-parallax__img" src="assets/images/parallax/layer_010.png" alt="фоновое изображение"></div>
-        </div>
+        <div class="scroll-parallax" data-parallax="scroll" data-image-src="assets/images/pages-bg.jpg" data-speed="0.3"></div>
         <div class="hero__socials">
           <ul class="socials">
             <li class="socials__items"><a class="socials__link" href="https://vk.com/olesia_sev" title="ВКонтакте">
@@ -60,8 +49,8 @@
             <use class="hero-title--svg" xlink:href="assets/images/icons.svg#portfolio_header"></use>
           </svg>
         </div>
-        <div class="user hero__user">
-          <div class="user__pic"><img class="user__pic-img" src="assets/images/avatar.jpg" alt=""></div>
+        <div class="user hero__user" data-parallax="scroll" data-speed="0.2">
+          <div class="user__pic"><img class="user__pic-img" src="assets/images/avatar.jpg" alt=""/></div>
           <div class="user__description">
             <div class="user__name">Олeся Севостьянова</div>
             <div class="user__info">Личный сайт веб-разработчика</div>
@@ -79,32 +68,32 @@
           </div>
         </div>
         <div class="container-blog">
-          <nav class="nav-articles">
+          <nav class="nav-articles" id="sticker">
             <ul class="nav-articles__list">
-              <li class="nav-articles__item">Самое важное в SASS</li>
-              <li class="nav-articles__item">Приёмы в вёрстке, без которых не обходится ни один сайт</li>
-              <li class="nav-articles__item">Самый необходимый набор Gulp плагинов</li>
-              <li class="nav-articles__item">Почему я выбрал Jade</li>
+              <li class="nav-articles__item"><a class="nav-articles__link" href="#article1" data-name="#article1">Самое важное в SASS</a></li>
+              <li class="nav-articles__item"><a class="nav-articles__link" href="#article2" data-name="#article2">Приёмы в вёрстке, без которых не обходится ни один сайт</a></li>
+              <li class="nav-articles__item"><a class="nav-articles__link" href="#article3" data-name="#article3">Самый необходимый набор Gulp плагинов</a></li>
+              <li class="nav-articles__item"><a class="nav-articles__link" href="#article4" data-name="#article4">Почему я выбрал Jade</a></li>
             </ul>
           </nav>
           <div class="articles-block">
-            <article class="article">
-              <div class="article__title">Самое важное в SASS</div>
+            <article class="article" id="article1">
+              <h2 class="article__title">Самое важное в SASS</h2>
               <div class="article__date">18.09.2017</div>
               <div class="article__text">Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия. Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</div>
             </article>
-            <article class="article">
-              <div class="article__title">Приёмы в вёрстке, без которых не обходится ни один сайт</div>
+            <article class="article" id="article2">
+              <h2 class="article__title">Приёмы в вёрстке, без которых не обходится ни один сайт</h2>
               <div class="article__date">20.10.2017</div>
               <div class="article__text">Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия. Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</div>
             </article>
-            <article class="article">
-              <div class="article__title">Самый необходимый набор Gulp плагинов</div>
+            <article class="article" id="article3">
+              <h2 class="article__title">Самый необходимый набор Gulp плагинов</h2>
               <div class="article__date">09.11.2017</div>
               <div class="article__text">Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия. Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</div>
             </article>
-            <article class="article">
-              <div class="article__title">Почему я выбрал Jade</div>
+            <article class="article" id="article4">
+              <h2 class="article__title">Почему я выбрал Jade</h2>
               <div class="article__date">11.12.2017</div>
               <div class="article__text">Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия. Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</div>
             </article>
@@ -164,12 +153,14 @@
           <li class="full-screen-menu__item"><a class="menu-link" href="my-works.html">Мои работы</a></li>
           <li class="full-screen-menu__item"><a class="menu-link" href="about.html">Обо мне</a></li>
           <li class="full-screen-menu__item"><a class="menu-link" href="blog.html">Блог</a></li>
-          <li class="full-screen-menu__item"><a class="menu-link" href="admin">Авторизация</a></li>
+          <li class="full-screen-menu__item"><a class="menu-link" href="/">Авторизация</a></li>
         </ul>
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTra4xCaEnsFJbNKtLikYUvJZ39GZ9nyo&amp;callback=initMap"></script>
+    <script src="assets/scripts/jquery.sticky.js"></script>
+    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+    <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTra4xCaEnsFJbNKtLikYUvJZ39GZ9nyo&amp;callback=initMap"></script>
     <!--script(src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript")-->
     <script src="assets/scripts/app.js"></script>
   </body>

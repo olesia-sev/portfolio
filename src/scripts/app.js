@@ -59,27 +59,39 @@ $(function() {
     $(".hero__burger-menu").toggleClass("menu-on");
     $(".full-screen-menu").toggleClass("full-screen-menu__active");
     $('html, body').toggleClass("no-scroll");
-  });
-});
 
-//full-screen menu появление слева и справа + текст меню
-$(function() {
-  $(".hero__burger-menu").on("click", function(e) {
-    e.preventDefault();
-
+    //-----full-screen menu появление слева и справа + текст меню
     $(".full-screen-menu__left").toggleClass("animated slideInLeft");
     $(".full-screen-menu__right").toggleClass("animated slideInRight");
     $(".full-screen-menu__item").toggleClass("animated zoomIn");
-
-    //close menu on ESC
-    $(document).on("keydown", function(e) {
-      if (e.keyCode === 27) {
-        $(".full-screen-menu").removeClass("full-screen-menu__active");
-        $(".hero__burger-menu").removeClass("menu-on");
-        $('html, body').removeClass("no-scroll");
-      }
-    });
   });
+});
+ 
+  //close menu on ESC
+  $(document).on("keydown", function(e) {
+    if (e.keyCode === 27) {
+      $(".full-screen-menu__left").removeClass("animated slideInLeft");
+      $(".full-screen-menu__right").removeClass("animated slideInRight");
+      $(".full-screen-menu__item").removeClass("animated zoomIn");
+
+      $(".full-screen-menu__item").addClass("animated zoomOut");
+      $(".full-screen-menu__left").addClass("animated slideOutLeft");
+      $(".full-screen-menu__right").addClass("animated slideOutRight");
+
+      $(".hero__burger-menu").removeClass("menu-on");
+      $("html, body").removeClass("no-scroll");
+      
+      setTimeout(function() {
+        $(".full-screen-menu").removeClass("full-screen-menu__active");
+      }, 400);
+      
+    }
+  });
+
+//-----scroll-parallax
+$(function() {
+  $('.scroll-parallax').parallax({imageSrc: '/assets/images/pages-bg.jpg'});
+  $('.hero__user').parallax({imageSrc: '/assets/images/pages-bg.jpg'});
 });
 
 // skills, function on scroll
@@ -175,31 +187,31 @@ function initMap() {
 }
 
 //blur
-$(function() {
-  var blur = (function() {
-    var wrapper = document.querySelector(".blur-wrapper"),
-      form = document.querySelector(".reviews__form--blur");
+// $(function() {
+//   var blur = (function() {
+//     var wrapper = document.querySelector(".blur-wrapper"),
+//       form = document.querySelector(".reviews__form--blur");
 
-    return {
-      set: function() {
-        var imgWidth = document.querySelector(".reviews__background-wrapper")
-            .offsetWidth,
-          posLeft = -wrapper.offsetLeft,
-          posTop = -wrapper.offsetTop,
-          blurCSS = form.style;
+//     return {
+//       set: function() {
+//         var imgWidth = document.querySelector(".reviews__background-wrapper")
+//             .offsetWidth,
+//           posLeft = -wrapper.offsetLeft,
+//           posTop = -wrapper.offsetTop,
+//           blurCSS = form.style;
 
-        blurCSS.backgroundSize = imgWidth + "px" + " " + "auto";
-        blurCSS.backgroundPosition = posLeft + "px" + " " + posTop + "px";
-      }
-    };
-  })();
+//         blurCSS.backgroundSize = imgWidth + "px" + " " + "auto";
+//         blurCSS.backgroundPosition = posLeft + "px" + " " + posTop + "px";
+//       }
+//     };
+//   })();
 
-  blur.set();
+//   blur.set();
 
-  window.onresize = function() {
-    blur.set();
-  };
-});
+//   window.onresize = function() {
+//     blur.set();
+//   };
+// });
 
 //parallax index
 $(function() {
@@ -227,8 +239,6 @@ $(function() {
   window.addEventListener("mousemove", moveLayers);
 });
 
-//parallax scroll
-$(function() {});
 
 // Slider
 (function($) {
@@ -338,3 +348,41 @@ $(function() {});
     slider.init();
   });
 })(jQuery);
+
+//sticky menu(content blog)
+$(document).ready(function(){
+  $("#sticker").sticky({topSpacing:0});
+});
+
+///-----выделение пунктов меню по скроллу, блог
+var sections = $('.article'),
+    nav = $('.nav-articles'),
+    nav_height = $('.nav-articles').outerHeight();
+
+$(window).on('scroll', function () {
+var cur_pos = $(this).scrollTop();
+
+sections.each(function() {
+  var top = $(this).offset().top,
+      bottom = top + $(this).outerHeight();
+
+  if (cur_pos >= top && cur_pos <= bottom) {
+    $('.nav-articles__link').removeClass('nav-articles__item--active');
+
+   //$('.nav-articles__link').addClass('nav-articles__item--active');
+    nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('nav-articles__item--active');
+  }
+});
+});
+
+//-----Плавный переход к статье по клику на название в содержании
+$('.nav-articles__link').on('click', function () {
+  var $el = $(this),
+      id = $el.attr('href');
+ 
+  $('html, body').animate({
+    scrollTop: $(id).offset().top
+  }, 500);
+ 
+  return false;
+});

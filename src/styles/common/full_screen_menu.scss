@@ -75,3 +75,14 @@
   animation-delay: .5s;
   left: initial;
 }
+
+.zoomOut {
+  animation-duration: 1s;
+  left: initial;
+}
+
+.slideOutLeft, .slideOutRight {
+  animation-duration: 1s;
+  animation-delay: 1s;
+}
+

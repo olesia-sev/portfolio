@@ -2,10 +2,10 @@ block variables
   -var hero = 'Личный сайт веб-разработчика'
 
 header.section.hero
-  .scroll-parallax
-    - for (var i = 1; i < 11; i++)
-      .scroll-parallax__layer
-        img.scroll-parallax__img(src=`assets/images/parallax/layer_0${i}.png`, alt="фоновое изображение")
+  .scroll-parallax(data-parallax="scroll", data-image-src="assets/images/pages-bg.jpg", data-speed=0.3)
+    //- - for (var i = 1; i < 11; i++)
+    //-   .scroll-parallax__layer
+    //-     img.scroll-parallax__img(src=`assets/images/parallax/layer_0${i}.png`, alt="фоновое изображение")
   .hero__socials
     ul.socials
       - 
@@ -44,7 +44,7 @@ header.section.hero
   .hero__title
     svg.hero-title--pic
       use(xlink:href= 'assets/images/icons.svg#portfolio_header').hero-title--svg
-  .user.hero__user
+  .user.hero__user(data-parallax="scroll", data-speed=0.2)
     .user__pic
       img(src="assets/images/avatar.jpg", alt="").user__pic-img
     .user__description

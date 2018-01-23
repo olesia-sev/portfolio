@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="RU-ru">
   <head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <meta content="ie=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <title></title>
-    <link rel="shortcut icon" href="assets/images/fav_mount.png" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="assets/styles/app.min.css">
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="ie=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+    <title>Обо мне</title>
+    <link rel="shortcut icon" href="assets/images/fav_mount.png" type="image/png"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
+    <link rel="stylesheet" href="assets/styles/app.min.css"/>
   </head>
   <body>
     <div class="preloader" id="preloader" style="background-image: url(assets/images/preloader/bg.jpg);">
@@ -22,18 +22,7 @@
     </div>
     <div class="wrapper visually-hidden">
       <header class="section hero">
-        <div class="scroll-parallax">
-          <div class="scroll-parallax__layer"><img class="scroll-parallax__img" src="assets/images/parallax/layer_01.png" alt="фоновое изображение"></div>
-          <div class="scroll-parallax__layer"><img class="scroll-parallax__img" src="assets/images/parallax/layer_02.png" alt="фоновое изображение"></div>
-          <div class="scroll-parallax__layer"><img class="scroll-parallax__img" src="assets/images/parallax/layer_03.png" alt="фоновое изображение"></div>
-          <div class="scroll-parallax__layer"><img class="scroll-parallax__img" src="assets/images/parallax/layer_04.png" alt="фоновое изображение"></div>
-          <div class="scroll-parallax__layer"><img class="scroll-parallax__img" src="assets/images/parallax/layer_05.png" alt="фоновое изображение"></div>
-          <div class="scroll-parallax__layer"><img class="scroll-parallax__img" src="assets/images/parallax/layer_06.png" alt="фоновое изображение"></div>
-          <div class="scroll-parallax__layer"><img class="scroll-parallax__img" src="assets/images/parallax/layer_07.png" alt="фоновое изображение"></div>
-          <div class="scroll-parallax__layer"><img class="scroll-parallax__img" src="assets/images/parallax/layer_08.png" alt="фоновое изображение"></div>
-          <div class="scroll-parallax__layer"><img class="scroll-parallax__img" src="assets/images/parallax/layer_09.png" alt="фоновое изображение"></div>
-          <div class="scroll-parallax__layer"><img class="scroll-parallax__img" src="assets/images/parallax/layer_010.png" alt="фоновое изображение"></div>
-        </div>
+        <div class="scroll-parallax" data-parallax="scroll" data-image-src="assets/images/pages-bg.jpg" data-speed="0.3"></div>
         <div class="hero__socials">
           <ul class="socials">
             <li class="socials__items"><a class="socials__link" href="https://vk.com/olesia_sev" title="ВКонтакте">
@@ -60,8 +49,8 @@
             <use class="hero-title--svg" xlink:href="assets/images/icons.svg#portfolio_header"></use>
           </svg>
         </div>
-        <div class="user hero__user">
-          <div class="user__pic"><img class="user__pic-img" src="assets/images/avatar.jpg" alt=""></div>
+        <div class="user hero__user" data-parallax="scroll" data-speed="0.2">
+          <div class="user__pic"><img class="user__pic-img" src="assets/images/avatar.jpg" alt=""/></div>
           <div class="user__description">
             <div class="user__name">Олeся Севостьянова</div>
             <div class="user__info">Личный сайт веб-разработчика</div>
@@ -82,11 +71,14 @@
         <div class="about__left">
           <div class="triangle triangle_fill_white"></div>
           <div class="about__left-title">
-            <div class="block-title">Обо мне</div>
+            <h2 class="block-title">Обо мне</h2>
+            <svg class="about-title--pic">
+              <use class="about-title--svg" xlink:href="assets/images/icons.svg#about_header"></use>
+            </svg>
           </div>
           <div class="about__left-content">
             <div class="user-description">
-              <div class="user-description__pic"><img class="user-description__img" src="assets/images/avatar.jpg" alt=""></div>
+              <div class="user-description__pic"><img class="user-description__img" src="assets/images/avatar.jpg" alt=""/></div>
               <div class="user-description__title">
                 <div class="block-subtitle">Кто я</div>
               </div>
@@ -317,12 +309,14 @@
           <li class="full-screen-menu__item"><a class="menu-link" href="my-works.html">Мои работы</a></li>
           <li class="full-screen-menu__item"><a class="menu-link" href="about.html">Обо мне</a></li>
           <li class="full-screen-menu__item"><a class="menu-link" href="blog.html">Блог</a></li>
-          <li class="full-screen-menu__item"><a class="menu-link" href="admin">Авторизация</a></li>
+          <li class="full-screen-menu__item"><a class="menu-link" href="/">Авторизация</a></li>
         </ul>
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTra4xCaEnsFJbNKtLikYUvJZ39GZ9nyo&amp;callback=initMap"></script>
+    <script src="assets/scripts/jquery.sticky.js"></script>
+    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+    <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTra4xCaEnsFJbNKtLikYUvJZ39GZ9nyo&amp;callback=initMap"></script>
     <!--script(src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript")-->
     <script src="assets/scripts/app.js"></script>
   </body>

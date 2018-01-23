@@ -64,13 +64,6 @@ function styles() {
     .pipe(gulp.dest(paths.styles.dest))
 }
 
-//fonts 
-// function ttfToWoff() {
-//   gulp.src(paths.fonts.src)
-//     .pipe(ttf2woff())
-//     .pipe(gulp.dest(paths.fonts.src))
-// }
-
 //svg
 function svg() {
   return gulp
@@ -136,8 +129,6 @@ exports.scripts = scripts;
 exports.watch = watch;
 
 exports.server = server;
-
-//exports.ttfToWoff = ttfToWoff;
 
 gulp.task('default', gulp.series(
   clean,

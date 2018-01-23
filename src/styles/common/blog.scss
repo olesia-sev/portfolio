@@ -13,6 +13,7 @@
   width: 20%;
   margin-right: 100px;
   text-align: right;
+  position: relative;
 
   @include tablets {
     display: none;
@@ -23,15 +24,21 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    position: relative;
   }
 
   &__item {
-    padding: 10px;
+
+  }
+  &__link {
+    display: block;
+    padding: 10px 20px 10px 0;
     font-family: roboto, Arial, Helvetica, sans-serif;
     font-size: 16px;
     font-weight: 400;
     color: $grey;
     cursor: pointer;
+    text-align: right;
   }
 
   &__item--active {
@@ -98,6 +105,16 @@
 .article:last-child {
   border-bottom: none;
   margin-bottom: 65px;
+}
+
+#sticker-sticky-wrapper {
+  width: 30%;
+  margin-right: 100px;
+}
+
+#sticker {
+  width: 100%;
+  margin-right: 100px;
 }
 
 .triangle-block {

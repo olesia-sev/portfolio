@@ -1,17 +1,16 @@
 block variables
 
-doctype html
+<!DOCTYPE html>
 html(lang="RU-ru")
   head
     meta(charset="UTF-8")
     meta(content="width=device-width, initial-scale=1" name="viewport")
     meta(content="ie=edge,chrome=1" http-equiv="X-UA-Compatible")
-    title #{title}
+    block title
     link(rel="shortcut icon" href="assets/images/fav_mount.png" type="image/png")
     link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css")
     link(rel="stylesheet", href="assets/styles/app.min.css")
   body
-    //- .wrapper
     .preloader#preloader(style="background-image: url(assets/images/preloader/bg.jpg);")
       .preloader__svg-cont
         svg.preloader__svg(version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -26,6 +25,8 @@ html(lang="RU-ru")
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=",
       crossorigin="anonymous"
     )
+    script(src="assets/scripts/jquery.sticky.js")
+    script(src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js")
     script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTra4xCaEnsFJbNKtLikYUvJZ39GZ9nyo&callback=initMap")
     //script(src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript")
     script(src="assets/scripts/app.js")

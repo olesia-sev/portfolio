@@ -1,7 +1,7 @@
 extends ../template
 
-block variables
-  -var title = 'Добро пожаловать!'
+block title
+  title Добро пожаловать!
 
 block content
   .container-welcome.welcome.visually-hidden
@@ -75,7 +75,8 @@ block content
                 a.form-menu__link(href=item.href)
                   | #{item.text}
       .welcome__form.welcome__form--back
-        .form__title Авторизуйтесь
+        .form__title-wrapper 
+          h2.form__title Авторизуйтесь
         .form-auth
           form.form(action="")
             .form__row

@@ -1,7 +1,7 @@
 extends ../template
 
-block variables
-  -var title = 'Обо мне'
+block title
+  title Обо мне
 
 block content
   .wrapper.visually-hidden
@@ -17,7 +17,9 @@ block content
       .about__left
         .triangle.triangle_fill_white
         .about__left-title
-          .block-title Обо мне
+          h2.block-title Обо мне
+          svg.about-title--pic
+            use(xlink:href= 'assets/images/icons.svg#about_header').about-title--svg
         .about__left-content
           .user-description
             .user-description__pic

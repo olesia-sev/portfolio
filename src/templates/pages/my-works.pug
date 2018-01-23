@@ -1,7 +1,7 @@
 extends ../template
 
-block variables
-  -var title = 'Мои работы'
+block title
+  title Мои работы
 
 block content
   .wrapper.visually-hidden
@@ -16,7 +16,8 @@ block content
           .slider
             .slider__description(data-slide='1').slider__slide--active
               .slider__description--info
-                .block-subtitle.slider__title Сайт школы онлайн образования
+                .title-wrapper
+                  .block-subtitle.slider__title Сайт школы онлайн образования
                 .slider__text html, css, javascript
                 .slider__link-block
                   a(href="#").slider__link Посмотреть Сайт
@@ -28,7 +29,8 @@ block content
                 img(src='assets/images/work-1.png', alt="скриншот сайта №1").slider__main-pic--img
             .slider__description(data-slide='2')
               .slider__description--info
-                .block-subtitle.slider__title Сайт школы онлайн образования-2
+                .title-wrapper
+                  .block-subtitle.slider__title Сайт школы онлайн образования-2
                 .slider__text html, css, javascript
                 .slider__link-block
                   a(href="#").slider__link Посмотреть Сайт
@@ -40,7 +42,8 @@ block content
                 img(src='http://fakeimg.pl/643x416/?text=2&font=lobster', alt="скриншот сайта №2").slider__main-pic--img
             .slider__description(data-slide='3')
               .slider__description--info
-                .block-subtitle.slider__title Сайт школы онлайн образования-3
+                .title-wrapper
+                  .block-subtitle.slider__title Сайт школы онлайн образования-3
                 .slider__text html, css, javascript
                 .slider__link-block
                   a(href="#").slider__link Посмотреть Сайт
@@ -55,7 +58,8 @@ block content
                 ).slider__main-pic--img
             .slider__description(data-slide='4')
               .slider__description--info
-                .block-subtitle.slider__title Сайт школы онлайн образования-4
+                .title-wrapper
+                  .block-subtitle.slider__title Сайт школы онлайн образования-4
                 .slider__text html, css, javascript
                 .slider__link-block
                   a(href="#").slider__link Посмотреть Сайт
@@ -141,23 +145,23 @@ block content
               .reviews__author--name-block
                 .reviews__author--name Сабанцев Владимир
                 .reviews__author--profession преподаватель
-      .reviews__form-block
-        .reviews__form
-          .blur-wrapper
-           .reviews__form--blur
-          .form.form-contact
-            .form__title Связаться со мной
-            .form__row
-              label(for="").form__label
-                input(type="text", name="" placeholder="Имя").form__input.form__input-contact
-            .form__row
-              label(for="").form__label
-                input(type="email", name="" placeholder="Email").form__input.form__input-contact
-            .form__row
-              label(for="").form__label
-                textarea(name="for__msg", id="for__msg", cols="30", rows="8" placeholder="Ваше сообщение").form__input.form__input-contact.form__input-contact--textarea
-            .reviews__form-menu
-              input(type="submit", value="Отправить" name="form_submit").form__button.form__button--submit
-              input(type="reset", value="Очистить" name="form_reset").form__button.form__button--reset
+      //.reviews__form-block
+      .reviews__form
+        .blur-wrapper
+          .reviews__form--blur
+        form.form.form-contact#contact
+          .form__title Связаться со мной
+          .form__row
+            label(for="").form__label
+              input(type="text", name="" placeholder="Имя").form__input.form__input-contact
+          .form__row
+            label(for="").form__label
+              input(type="email", name="" placeholder="Email").form__input.form__input-contact
+          .form__row
+            label(for="").form__label
+              textarea(name="for__msg", id="for__msg", cols="30", rows="8" placeholder="Ваше сообщение").form__input.form__input-contact.form__input-contact--textarea
+          .reviews__form-menu
+            input(type="submit", value="Отправить", name="form_submit", form="contact").form__button.form__button--submit
+            input(type="reset", value="Очистить", name="form_reset", form="contact").form__button.form__button--reset
   include ../common/footer
   include ../common/full_screen_menu.pug
