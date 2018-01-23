@@ -11,3 +11,5 @@
 1. clone this repo
 2. npm i
 3. gulp
+
+https://olesia-sev.github.io/portfolio/build/
